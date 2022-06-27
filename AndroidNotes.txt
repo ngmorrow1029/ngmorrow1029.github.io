@@ -1,0 +1,7 @@
+(Hang Man): Lets a user enter in a word that the other user has to guess 1 character at a time. After this user has entered the winning characters. It would go to a new page hiding the word chosen. Let’s the second user pick a character A-Z trying to guess the correct word the first user has chosen. If you choose a wrong character a part of a stick figure character would be draw. If you choose the correct character the letter will be filled into the blank. _ A _ _ something like that. If the stick figure person is complete than you lose the game and the word is filled in.
+
+(Tournament): Keeps track of the score for user 1 and user 2 or more. If we have more than 2 users we use a round robin method for the tournament to get all the players to play each other once. We would keep track of who wins each game mode and each series to add a point to that users total and once everyone has played all the games at least once against every user we would tally up the wins and whoever has the most is the winner of the tournament. If the players tie in a game mode they all receive a point. If all players tie in total number of points everyone wins.
+Risks
+Hang man – rendering the correct image when needed could be tricky. Decided when the image after so many guesses is complete and the user has loss
+
+Tournament Scoreboard – organizing all the data from each activity. Keeping track of who won each game mode and turning that into a score board view. 

@@ -1,0 +1,10 @@
+umbrella => rain
+shovel/Boots => snow
+sunglasses/Ballcap => clear skies
+
+T-Shirt/Shorts => Low above 60
+Sweater => low between 40 and 55
+Jacket => High between 20 and 40
+Knitcap/Gloves => freezing or below (32)
+
+http://api.openweathermap.org/data/2.5/weather?id=5056172&units=imperial&APPID=22e71f4206bfc8e737d847f28463ad0b
