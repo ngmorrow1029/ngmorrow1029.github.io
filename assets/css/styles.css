@@ -1,3 +1,89 @@
+
+/***** 
+Base Styles
+*****/
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	/* font-family:; */
+	font-size: 1.125rem;
+}
+
+body {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, p {
+	margin: 0;
+}
+
+h2, h3 {
+	/* font-family: ; */
+	line-height: 0.8;
+}
+
+h2 {
+	font-size: 4rem;
+}
+
+p {
+	margin-bottom: 0.85em;
+}
+
+/* Navigation */
+
+header {
+	padding: 1em 0 2em;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	justify-content: space-around;
+}
+
+nav a {
+	display: inline-block;
+	padding: 0.5em;
+	/* color: ; */
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+	/* color: ; */
+	text-decoration: underline;
+}
+
+/* Homepage Styles */
+
+.hero {
+	background-color: #333;
+	/* background-image: ; */
+	background-blend-mode: multiply;
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	padding: 15vh 1em;
+}
+
+
 /* body:before {
 	content: "";
 	position: fixed;
