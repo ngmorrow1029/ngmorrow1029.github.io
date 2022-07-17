@@ -10,15 +10,17 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="#intro">About Me</a>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+
+        <!-- Introduction (About Me) -->
+        <section id="intro">
             <h2>
                 <p>I am a hardworking software engineer who is focused on going above and beyond to support my team and serve customers. I am goal oriented and motivated to continue to grow as a full-stack developer.</p>
                 <p>I have experience working with a variety of technologies as a full-stack developer. I have gotten the opportunity to work with a variety of frameworks such as Angular, Grails, .Net, and the traditional web-stack. I stay agile throughout development cycles with a team-first focus and understand to plan an appropriate scope with the ability to adjust to changes along the way. I leverage my interpersonal skills when gathering requirements from the business which allow me to bridge the gap in communication. I'm a willing learner and not afraid to ask questions to clarify requirements to ensure high quality and efficiency. I learn quickly and am ready for the challenges this new opportunity brings.</p>
@@ -26,14 +28,30 @@
                 <p>Sincerely,<br /><br />Nicholas Morrow</p>
             </h2>
         </section>
+
+        <!-- Side Content (Contact) -->
         <section class="side-contact">
             <img class="prof-pic" />
             <p>Contact Me:</p>
             <ul>
                 <li>Contact Me</li>
                 <li>LinkedIn</li>
-                <li>View Resume | Download Resume</li>
+                <li>View Resume | <a href="assets/docs/resume.pdf" download>Download Resume</a></li>
             </ul>
+        </section>
+
+        <!-- Resume -->
+        <section id="resume" class="resume-img">
+            <img src="assets/images/resume.png" alt="Resume">
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="content-grid">
+            <div class="content-left"></div>
+            <div class="content-right"></div>
+            <div class="content-left"></div>
+            <div class="content-right"></div>
+            <div class="content-left"></div>
         </section>
     </main>
     <!-- <p>https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/</p>

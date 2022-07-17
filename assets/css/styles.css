@@ -83,6 +83,24 @@ nav a:focus {
 	padding: 15vh 1em;
 }
 
+.content-grid {
+	display: grid;
+	gap: 1rem;
+}
+
+.content-grid > .content-left {
+	grid-template-columns: 70% 1fr;
+}
+
+.content-grid > .content-right {
+	grid-template-columns: 1fr 70%;
+}
+
+.resume-img {
+}
+
+.resume-img > img {
+}
 
 /* body:before {
 	content: "";
