@@ -142,6 +142,13 @@ nav a:focus {
 	padding: 10px 0;
 	height: 150px;
   }
+
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+	.resume-modal-content {
+	  max-width: 100%;
+	}
+  }
   
   /* Add Animation - Zoom in the Modal */
   .resume-modal-content, #resumeCaption {
@@ -170,13 +177,6 @@ nav a:focus {
 	color: #bbb;
 	text-decoration: none;
 	cursor: pointer;
-  }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-	.modal-content {
-	  max-width: 100%;
-	}
   }
 
 /* body:before {
