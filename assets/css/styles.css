@@ -96,8 +96,8 @@ nav a:focus {
 	grid-template-columns: 1fr 70%;
 }
 
-.resume-img {
-}
+/* .resume-img {
+} */
 
 .resume-img > img {
 	border-radius: 5px;
