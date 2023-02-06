@@ -3,65 +3,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets\css\styles.css">
     <title>Portfolio :|: Web Resume</title>
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
-                <li><a href="https://ngmorrow1029.github.io">Home</a></li>
-                <li><a href="#intro">About Me</a>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="assets/docs/nickMorrow_resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
+        <div class="content-grid">
+            <!-- Introduction (About Me) -->
+            <section id="intro">
+                <h4>
+                    <p>I am a hardworking software engineer who is focused on going above and beyond to support my team and serve customers. I am goal oriented and motivated to continue to grow as a full-stack developer.</p>
+                    <p>I have experience working with a variety of technologies as a full-stack developer. I have gotten the opportunity to work with a variety of frameworks such as Angular, Grails, .Net, and the traditional web-stack. I stay agile throughout development cycles with a team-first focus and understand to plan an appropriate scope with the ability to adjust to changes along the way. I leverage my interpersonal skills when gathering requirements from the business which allow me to bridge the gap in communication. I'm a willing learner and not afraid to ask questions to clarify requirements to ensure high quality and efficiency. I learn quickly and am ready for the challenges this new opportunity brings.</p>
+                    <p>Please contact me at if you have any questions or comments. Thank you for your time and I look forward to hearing from you.</p>
+                    <p>Sincerely,<br /><br />Nicholas Morrow</p>
+                </h2>
+            </section>
 
-        <!-- Introduction (About Me) -->
-        <section id="intro">
-            <h2>
-                <p>I am a hardworking software engineer who is focused on going above and beyond to support my team and serve customers. I am goal oriented and motivated to continue to grow as a full-stack developer.</p>
-                <p>I have experience working with a variety of technologies as a full-stack developer. I have gotten the opportunity to work with a variety of frameworks such as Angular, Grails, .Net, and the traditional web-stack. I stay agile throughout development cycles with a team-first focus and understand to plan an appropriate scope with the ability to adjust to changes along the way. I leverage my interpersonal skills when gathering requirements from the business which allow me to bridge the gap in communication. I'm a willing learner and not afraid to ask questions to clarify requirements to ensure high quality and efficiency. I learn quickly and am ready for the challenges this new opportunity brings.</p>
-                <p>Please contact me at if you have any questions or comments. Thank you for your time and I look forward to hearing from you.</p>
-                <p>Sincerely,<br /><br />Nicholas Morrow</p>
-            </h2>
-        </section>
+            <!-- Side Content (Contact) -->
+            <section class="side-contact">
+                <img class="prof-pic" src="assets/images/prof_pic.png" />
+                <p>Contact Me:</p>
+                <ul>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="http://www.linkedin.com/in/nicholas-g-morrow" target="_blank">LinkedIn</a></li>
+                    <li>
+                        <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">View Resume</a> | 
+                        <a href="assets/docs/nickMorrow_resume.pdf" download>Download Resume</a>
+                    </li>
+                </ul>
+            </section>
 
-        <!-- Side Content (Contact) -->
-        <section class="side-contact">
-            <img class="prof-pic" />
-            <p>Contact Me:</p>
-            <ul>
-                <li>Contact Me</li>
-                <li>LinkedIn</li>
-                <li>
-                    <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">View Resume</a> | 
-                    <a href="assets/docs/nickMorrow_resume.pdf" download>Download Resume</a>
-                </li>
-            </ul>
-        </section>
+            <!-- Resume -->
+            <section class="resume-img">
+                <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">
+                    <img id="resumeImg" src="assets/images/resume.png" alt="Resume"></a>
+            </section>
 
-        <!-- Resume -->
-        <section class="resume-img">
-            <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">
-                <img id="resumeImg" src="assets/images/resume.png" alt="Resume"></a>
-        </section>
+            <!-- Projects -->
+            <section id="projects" class="content-grid">
+                <div class="content-left"></div>
+                <div class="content-right"></div>
+                <div class="content-left"></div>
+                <div class="content-right"></div>
+                <div class="content-left"></div>
+            </section>
+        </div>
 
-        <!-- Projects -->
-        <section id="projects" class="content-grid">
-            <div class="content-left"></div>
-            <div class="content-right"></div>
-            <div class="content-left"></div>
-            <div class="content-right"></div>
-            <div class="content-left"></div>
-        </section>
     </main>
     <!-- <p>https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/</p>
     <p>https://github.com/mdx97/recipe_app</p>
     <p>https://g.dev/nickgmorrow</p>
     <p>https://vimeo.com/ngmorrow</p> -->
+
+    <footer>
+        
+    </footer>
 
     <script type="text/javascript" src="assets/js/img-modal.js"></script>
     

@@ -96,6 +96,15 @@ nav a:focus {
 	grid-template-columns: 1fr 70%;
 }
 
+.prof-pic {
+	max-height: 80%;
+	min-width: 100%;
+}
+
+.side-contact {
+	max-width: 30%;
+}
+
 /* .resume-img {
 } */
 
