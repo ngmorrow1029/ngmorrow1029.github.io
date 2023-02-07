@@ -3,6 +3,33 @@
 Base Styles
 *****/
 
+/* root variables */
+:root {
+	/* Color */
+	--clr-light: #A3A3A3 /*163, 163, 163*/;
+	--clr-dark: #121212 /*18, 18, 18*/;
+	--clr-accent: #85BCA2 /*133, 188, 162*/;
+	--clr-accent-01: #388065 /*56, 128, 101*/;
+	--clr-accent-02: #616194 /*97, 97, 148*/;
+
+	/* Font Weight */
+	--fw-reg: 300;
+    --fw-bold: 900;
+  
+	/* Font Family */
+	--ff-primary: 'Roboto', sans-serif;
+	--ff-secondary: 'Source Code Pro', monospace;
+
+	/* Font Size */
+	--fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+	--bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+} 
+
 *,
 *::before,
 *::after {
@@ -15,39 +42,167 @@ html {
 	font-size: 1.125rem;
 }
 
-body {
+
+  
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
 	margin: 0;
 }
 
-img {
-	display: block;
-	max-width: 100%;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	min-height: 100dvh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+  
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+body {
+	background: var(--clr-dark);
+	color: var(--clr-light);
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	margin: 0;
+    line-height: 1.6;
 }
 
 /* Typography */
+h1 {
+	font-size: 4rem;
+}
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3 {
+	color: var(--clr-dark);
+	font-family: var(--ff-secondary);
+	font-weight: 900;
+	line-height: 1;
 	margin: 0;
 }
 
-h2, h3 {
-	/* font-family: ; */
-	line-height: 0.8;
+h2,
+h3,
+p {
+	margin-bottom: 1em;
 }
 
-h2 {
-	font-size: 4rem;
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+.text-center {
+	text-align: center;
+}
+
+header,
+section {
+	padding: 3rem 0;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+.container {
+	margin-inline: auto;
+	width: min(90%, 70.5em);
+}
+
+.container--narrow {
+	max-width: 34rem;
+}
+
+.bg-light {
+	color: var(--clr-dark);
+	background-color: var(--clr-light);
+}
+
+.bg-primary {
+	color: var(--clr-accent);
+	background-color: var(--clr-dark);
+}
+
+.bg-dark {
+	color: var(--clr-light);
+	background-color: var(--clr-dark);
+}
+
+.bg-primary h2,
+.bg-light h2 {
+	color: var(--clr-accent-02);
 }
 
 p {
 	margin-bottom: 0.85em;
 }
 
-/* Navigation */
-
 header {
 	padding: 1em 0 2em;
 }
+
+/* Navigation */
 
 nav ul {
 	display: flex;
@@ -70,22 +225,117 @@ nav a:focus {
 	text-decoration: underline;
 }
 
+nav.primary-navigation {
+	/* position: fixed; */
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1); */
+}
+/* 
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-accent);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; } */
+
+
 /* Homepage Styles */
 
+/* h1.section__title {
+} */
+
 .hero {
-	background-color: #333;
+	background-color: var(--clr-dark);
 	/* background-image: ; */
 	background-blend-mode: multiply;
 	background-attachment: fixed;
 	background-size: cover;
-	color: white;
+	color: var(--clr-light);
 	text-align: center;
 	padding: 15vh 1em;
+}
+
+.hero-container {
+
 }
 
 .content-grid {
 	display: grid;
 	gap: 1rem;
+	grid-template-columns: 1fr;
+	padding-block: 1rem;
+	margin-inline: auto;
+}
+
+@media (min-width: 60em) {
+	.content-grid {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 3fr 1fr;
+		padding-block: 1rem;
+		margin-inline: auto;
+	}
 }
 
 .content-grid > .content-left {
@@ -97,12 +347,12 @@ nav a:focus {
 }
 
 .prof-pic {
-	max-height: 80%;
-	min-width: 100%;
+	/* max-height: 100%;
+	min-width: 100%; */
 }
 
 .side-contact {
-	max-width: 30%;
+	/* max-width: 30%; */
 }
 
 /* .resume-img {
@@ -111,13 +361,15 @@ nav a:focus {
 .resume-img > img {
 	border-radius: 5px;
   	cursor: pointer;
-  	transition: 0.3s;
+	width: max-content;
+  	/* transition: 0.3s; */
 }
 
-.resume-img > img:hover {
+/* .resume-img > img:hover {
 	opacity: 0.75;
-}
+} */
 
+/* UNUSED for now */
 .resume-modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */

@@ -3,62 +3,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets\css\styles.css">
+
     <title>Portfolio :|: Web Resume</title>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="assets/docs/nickMorrow_resume.pdf" target="_blank">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
+    <header class="text-center">
+        <!-- <div class="logo">
+            <img src="assets/images/logo.png" alt="">
+        </div> -->
+        <!-- <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button> -->
+        <nav class="primary-navigation">
+            <ul role="list" class="nav__list">
+                <li class="nav__item"><a href="index.html">About Me</a></li>
+                <li class="nav__item"><a href="assets/docs/nickMorrow_resume.pdf" target="_blank">Resume</a></li>
+                <li class="nav__item"><a href="projects.html">Projects</a></li>
+                <li class="nav__item"><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="content-grid">
+        <div class="bg-dark content-grid">
+
             <!-- Introduction (About Me) -->
-            <section id="intro">
-                <h4>
-                    <p>I am a hardworking software engineer who is focused on going above and beyond to support my team and serve customers. I am goal oriented and motivated to continue to grow as a full-stack developer.</p>
-                    <p>I have experience working with a variety of technologies as a full-stack developer. I have gotten the opportunity to work with a variety of frameworks such as Angular, Grails, .Net, and the traditional web-stack. I stay agile throughout development cycles with a team-first focus and understand to plan an appropriate scope with the ability to adjust to changes along the way. I leverage my interpersonal skills when gathering requirements from the business which allow me to bridge the gap in communication. I'm a willing learner and not afraid to ask questions to clarify requirements to ensure high quality and efficiency. I learn quickly and am ready for the challenges this new opportunity brings.</p>
-                    <p>Please contact me at if you have any questions or comments. Thank you for your time and I look forward to hearing from you.</p>
-                    <p>Sincerely,<br /><br />Nicholas Morrow</p>
-                </h2>
+            <section class="bg-primary" id="home">
+                <div class="container">
+                    <div class="intro">
+                        <h1 class="section__title section__title--intro">
+                            Hello, I am <strong>Nick Morrow</strong>
+                        </h1>
+                        <p class="section__subtitle section__subtitle--intro">Full-Stack Software Engineer</p>
+                        <h4>
+                            <p>I am a hardworking software engineer who is focused on going above and beyond to support my team and serve customers.
+                                I am goal oriented and motivated to continue to grow as a full-stack developer.</p>
+                            <p>I have experience working with a variety of technologies as a full-stack developer.
+                                I have gotten the opportunity to work with a variety of frameworks such as Angular, Grails, .Net, and the traditional web-stack.
+                                I stay agile throughout development cycles with a team-first focus and understand to plan an appropriate scope with the ability to adjust to changes along the way.
+                                I leverage my interpersonal skills when gathering requirements from the business which allow me to bridge the gap in communication.
+                                I'm a willing learner and not afraid to ask questions to clarify requirements to ensure high quality and efficiency.
+                                I learn quickly and am ready for the challenges this new opportunity brings.</p>
+                            <p>Please contact me at if you have any questions or comments. Thank you for your time and I look forward to hearing from you.</p>
+                            <p>Sincerely,<br /><br />Nicholas Morrow</p>
+                        </h4>
+                    </div>
+                </div>
             </section>
 
             <!-- Side Content (Contact) -->
-            <section class="side-contact">
-                <img class="prof-pic" src="assets/images/prof_pic.png" />
-                <p>Contact Me:</p>
-                <ul>
-                    <li><a href="contact.html">Contact Me</a></li>
-                    <li><a href="http://www.linkedin.com/in/nicholas-g-morrow" target="_blank">LinkedIn</a></li>
-                    <li>
-                        <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">View Resume</a> | 
-                        <a href="assets/docs/nickMorrow_resume.pdf" download>Download Resume</a>
-                    </li>
-                </ul>
+            <section class="bg-primary">
+                <div class="container">
+                    <div class="side-contact">
+                        <img class="prof-pic" src="assets/images/prof_pic.png" alt="a picture of Nick Morrow smiling and looking professional" />
+                        <p>Contact Me:</p>
+                        <ul>
+                            <li><a href="contact.html">Contact Me</a></li>
+                            <li><a href="http://www.linkedin.com/in/nicholas-g-morrow" target="_blank">LinkedIn</a></li>
+                            <li>
+                                <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">View Resume</a> |
+                                <a href="assets/docs/nickMorrow_resume.pdf" download>Download Resume</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <!-- Resume -->
             <section class="resume-img">
-                <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">
-                    <img id="resumeImg" src="assets/images/resume.png" alt="Resume"></a>
+                <div class="container">
+                    <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">
+                        <img id="resumeImg" src="assets/images/resume.png" alt="Resume"></a>
+                </div>
             </section>
 
             <!-- Projects -->
-            <section id="projects" class="content-grid">
+            <!-- <section id="projects" class="content-grid">
                 <div class="content-left"></div>
                 <div class="content-right"></div>
                 <div class="content-left"></div>
                 <div class="content-right"></div>
                 <div class="content-left"></div>
-            </section>
+            </section> -->
         </div>
 
     </main>
