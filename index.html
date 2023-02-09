@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <header class="bg-primary text-center">
+    <header class="primary-header text-center">
         <!-- <div class="logo">
             <img src="assets/images/logo.png" alt="">
         </div> -->
@@ -32,11 +32,11 @@
     </header>
 
     <main>
-        <div class="bg-dark content-grid">
+        <div class="bg-dark container">
+            <div class="content-grid">
 
-            <!-- Introduction (About Me) -->
-            <section class="container" id="home">
-                <div class="intro">
+                <!-- Introduction (About Me) -->
+                <section class="intro grid-container" id="home">
                     <h1 class="section__title section__title--intro">
                         Hello, I am <strong>Nick Morrow</strong>
                     </h1>
@@ -53,30 +53,30 @@
                         <p>Please contact me at if you have any questions or comments. Thank you for your time and I look forward to hearing from you.</p>
                         <p>Sincerely,<br />Nicholas Morrow</p>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Side Content (Contact) -->
-            <section class="container">
-                <div class="side-contact">
-                    <img class="prof-pic" src="assets/images/prof_pic.png" alt="a picture of Nick Morrow smiling and looking professional" />
-                    <p>
-                        Contact Me: <a href="contact.html">Email</a> | <a href="http://www.linkedin.com/in/nicholas-g-morrow" target="_blank">LinkedIn</a></li>
-                    </p>
-                    <p>
+                <!-- Side Content (Contact) -->
+                <section class="side-contact grid-container">
+                    <div class="prof-pic">
+                        <img src="assets/images/prof_pic.png" alt="a picture of Nick Morrow smiling and looking professional" />
+                    </div>
+                    <div class="contact-info-group">
+                        <span class="text-strong-accent">Contact Me:</span>
+                        <a href="contact.html">Email</a> |
+                        <a href="http://www.linkedin.com/in/nicholas-g-morrow" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="resume-info-group">
                         <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">View Resume</a> |
                         <a href="assets/docs/nickMorrow_resume.pdf" download>Download Resume</a>
-                    </p>
-                    <div class="resume-img">
-                        <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">
-                            <img id="resumeImg" src="assets/images/resume.png" alt="Resume"></a>
+                        <!-- <div class="resume-img">
+                            <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">
+                                <img id="resumeImg" src="assets/images/resume.png" alt="Resume"></a>
+                        </div> -->
                     </div>
-                </div>
-            </section>
-
-            <!-- Resume Experience -->
-            <section class="container">
-                <div class="resume-experience">
+                </section>
+                
+                <!-- Resume Experience -->
+                <section class="resume-experience grid-container">
                     <h2>Experience</h2>
                     <p>
                         <strong>CUSTOM SOFTWARE ENGINEER&nbsp;&nbsp;&nbsp;</strong><i>Jan 2023 - Current</i>
@@ -129,17 +129,16 @@
                         <i>May 2016</i><br />
                         <span>Longview Community College</span>
                     </p>
-                </div>
-            </section>
-
-            <!-- Projects -->
-            <!-- <section id="projects" class="content-grid">
-                <div class="content-left"></div>
-                <div class="content-right"></div>
-                <div class="content-left"></div>
-                <div class="content-right"></div>
-                <div class="content-left"></div>
-            </section> -->
+                </section>
+                <!-- Projects -->
+                <!-- <section id="projects" class="content-grid">
+                    <div class="content-left"></div>
+                    <div class="content-right"></div>
+                    <div class="content-left"></div>
+                    <div class="content-right"></div>
+                    <div class="content-left"></div>
+                </section> -->
+            </div>
         </div>
 
     </main>
