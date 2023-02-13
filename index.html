@@ -3,62 +3,142 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets\css\styles.css">
+
     <title>Portfolio :|: Web Resume</title>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="assets/docs/nickMorrow_resume.pdf" target="_blank">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
+    <header class="primary-header text-center">
+        <!-- <div class="logo">
+            <img src="assets/images/logo.png" alt="">
+        </div> -->
+        <!-- <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button> -->
+        <nav class="primary-navigation">
+            <ul role="list" class="nav__list">
+                <li class="nav__item"><a href="index.html">About Me</a></li>
+                <li class="nav__item"><a href="assets/docs/nickMorrow_resume.pdf" target="_blank">Resume</a></li>
+                <li class="nav__item"><a href="projects.html">Projects</a></li>
+                <li class="nav__item"><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="content-grid">
-            <!-- Introduction (About Me) -->
-            <section id="intro">
-                <h4>
-                    <p>I am a hardworking software engineer who is focused on going above and beyond to support my team and serve customers. I am goal oriented and motivated to continue to grow as a full-stack developer.</p>
-                    <p>I have experience working with a variety of technologies as a full-stack developer. I have gotten the opportunity to work with a variety of frameworks such as Angular, Grails, .Net, and the traditional web-stack. I stay agile throughout development cycles with a team-first focus and understand to plan an appropriate scope with the ability to adjust to changes along the way. I leverage my interpersonal skills when gathering requirements from the business which allow me to bridge the gap in communication. I'm a willing learner and not afraid to ask questions to clarify requirements to ensure high quality and efficiency. I learn quickly and am ready for the challenges this new opportunity brings.</p>
-                    <p>Please contact me at if you have any questions or comments. Thank you for your time and I look forward to hearing from you.</p>
-                    <p>Sincerely,<br /><br />Nicholas Morrow</p>
-                </h2>
-            </section>
+        <div class="bg-dark container">
+            <div class="content-grid">
 
-            <!-- Side Content (Contact) -->
-            <section class="side-contact">
-                <img class="prof-pic" src="assets/images/prof_pic.png" />
-                <p>Contact Me:</p>
-                <ul>
-                    <li><a href="contact.html">Contact Me</a></li>
-                    <li><a href="http://www.linkedin.com/in/nicholas-g-morrow" target="_blank">LinkedIn</a></li>
-                    <li>
-                        <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">View Resume</a> | 
+                <!-- Introduction (About Me) -->
+                <section class="intro grid-container" id="home">
+                    <h1 class="section__title section__title--intro">
+                        Hello, I am <strong>Nick Morrow</strong>
+                    </h1>
+                    <p class="section__subtitle section__subtitle--intro">Full-Stack Software Engineer</p>
+                    <div class="introduction-body">
+                        <p>I am a hardworking software engineer who is focused on going above and beyond to support my team and serve customers.
+                            I am goal oriented and motivated to continue to grow as a full-stack developer.</p>
+                        <p>I have experience working with a variety of technologies as a full-stack developer.
+                            I have gotten the opportunity to work with a variety of frameworks such as Angular, Grails, .Net, and the traditional web-stack.
+                            I stay agile throughout development cycles with a team-first focus and understand to plan an appropriate scope with the ability to adjust to changes along the way.
+                            I leverage my interpersonal skills when gathering requirements from the business which allow me to bridge the gap in communication.
+                            I'm a willing learner and not afraid to ask questions to clarify requirements to ensure high quality and efficiency.
+                            I learn quickly and am ready for the challenges this new opportunity brings.</p>
+                        <p>Please contact me at if you have any questions or comments. Thank you for your time and I look forward to hearing from you.</p>
+                        <p>Sincerely,<br />Nicholas Morrow</p>
+                    </div>
+                </section>
+
+                <!-- Side Content (Contact) -->
+                <section class="side-content grid-container">
+                    <div class="prof-pic">
+                        <img src="assets/images/prof_pic.png" alt="a picture of Nick Morrow smiling and looking professional" />
+                    </div>
+                    <div class="contact-info-group">
+                        <span class="text-strong-accent">Contact Me:</span>
+                        <a href="contact.html">Email</a> |
+                        <a href="http://www.linkedin.com/in/nicholas-g-morrow" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="resume-info-group">
+                        <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">View Resume</a> |
                         <a href="assets/docs/nickMorrow_resume.pdf" download>Download Resume</a>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Resume -->
-            <section class="resume-img">
-                <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">
-                    <img id="resumeImg" src="assets/images/resume.png" alt="Resume"></a>
-            </section>
-
-            <!-- Projects -->
-            <section id="projects" class="content-grid">
-                <div class="content-left"></div>
-                <div class="content-right"></div>
-                <div class="content-left"></div>
-                <div class="content-right"></div>
-                <div class="content-left"></div>
-            </section>
+                        <!-- <div class="resume-img">
+                            <a href="assets/docs/nickMorrow_resume.pdf" target="_blank">
+                                <img id="resumeImg" src="assets/images/resume.png" alt="Resume"></a>
+                        </div> -->
+                    </div>
+                </section>
+                
+                <!-- Resume Experience -->
+                <section class="resume-experience grid-container">
+                    <h2>Experience</h2>
+                    <p>
+                        <strong>CUSTOM SOFTWARE ENGINEER&nbsp;&nbsp;&nbsp;</strong><i>Jan 2023 - Current</i>
+                        <br /><i>Accenture</i><br />
+                        <span class="resume-experience-body">Technical Analyst that works with a variety of technologies to impliment custom software solutions.</span>
+                    </p>
+                    <p>
+                        <strong>SOFTWARE ENGINEER&nbsp;&nbsp;&nbsp;</strong><i>Jan 2019 - Jan 2023</i>
+                        <br /><i>Federal Reserve Bank of Kansas City</i><br />
+                        <span class="resume-experience-body">Full-Stack Developer in an Agile/Sprint Scrum framework.
+                            This role had me wearing a variety of hats: DBA, Cloud Development, DevOps/Middleware, Test Drivent Development, Version Control,
+                            and working directly with customers to translate business need into technical requirements.</span>
+                    </p>
+                    <p>
+                        <strong>TEACHING ASSISTANT&nbsp;&nbsp;&nbsp;</strong><i>Aug 2017 - Dec 2018</i>
+                        <br /><i>Northwest Missouri State University</i><br />
+                        <span class="resume-experience-body">Data Structures teaching assistant and held afterhours tutoring sessions three times a week.</span>
+                    </p>
+                    <p>
+                        <strong>SALES ASSOCIATE&nbsp;&nbsp;&nbsp;</strong><i>Jun 2015 - Feb 2017</i>
+                        <br /><i>Best Buy</i><br />
+                        <span class="resume-experience-body">Computer sales and consultant on finding the total solution for customer needs.</span>
+                    </p>
+                    <p>
+                        <strong>TECHNICAL ASSISTANT&nbsp;&nbsp;&nbsp;</strong><i>Aug 2013 - Aug 2016</i>
+                        <br /><i>Grace United Methodist Church</i><br />
+                        <span class="resume-experience-body">Managed Live Streaming, Video Editing, and was the Presentation Guide during sermons.</span>
+                    </p>
+                    <p>
+                        <strong>WEB DEVELOPER INTERN&nbsp;&nbsp;&nbsp;</strong><i>Jun 2013 - Jul 2014</i>
+                        <br /><i>IDP Web Design</i><br />
+                        <span class="resume-experience-body">First exposure to web development and got some experience taking in customer requirements.
+                            Worked with a vairety of technologies: Word Press, FTP Version Control, Content Management, and made some front-end enhancements.
+                        </span>
+                    </p>
+                    <p>
+                        <strong>TEACHING ASSISTANT&nbsp;&nbsp;&nbsp;</strong><i>Aug 2013 - May 2014</i>
+                        <br /><i>Lee's Summit High School</i><br />
+                        <span class="resume-experience-body">Introduction to Website Design tutoring and classroom assistant.</span>
+                    </p>
+                    <br />
+                    <h2>Education</h2>
+                    <p>
+                        <strong>BACHELOR OF SCIENCE - COMPUTER SCIENCE</strong><br />
+                        <i>Dec 2018</i><br />
+                        <span>Northwest Missouri State University</span>
+                    </p>
+                    <p>
+                        <strong>ASSOCIATE OF ARTS</strong><br />
+                        <i>May 2016</i><br />
+                        <span>Longview Community College</span>
+                    </p>
+                </section>
+                <!-- Projects -->
+                <!-- <section id="projects" class="content-grid">
+                    <div class="content-left"></div>
+                    <div class="content-right"></div>
+                    <div class="content-left"></div>
+                    <div class="content-right"></div>
+                    <div class="content-left"></div>
+                </section> -->
+            </div>
         </div>
 
     </main>
