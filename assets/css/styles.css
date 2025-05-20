@@ -130,7 +130,7 @@ html {
 
 body {
 	background-color: var(--clr-light);
-	background-image: url(../images/vaio_hard_edge.png);
+	background-image: url(../images/background/vaio_hard_edge.png);
 	background-blend-mode: multiply;
 	background-repeat: repeat;
 	background-attachment: fixed;
@@ -333,6 +333,7 @@ nav a:focus {
 
 .grid-container {
 	border: 3px solid hotpink;
+	padding: 1em;
 }
 
 @media (min-width: 60em) {
@@ -635,4 +636,22 @@ a:active {
 
 .thankyou_message {
 	display:none;
+}
+
+/* Projects */
+
+.projects-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* Two equal columns */
+	height: 100vh; /* Full viewport height */
+}
+
+.visual-demo {
+	background-color: #fff;
+	padding: 20px;
+	border-right: 1px solid #ccc;
+}
+
+.explanation {
+	padding: 20px;
 }
