@@ -9,10 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Stylesheets -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
@@ -36,9 +33,7 @@
         <ul role="list" class="nav__list">
           <li class="nav__item"><a href="index.html">About Me</a></li>
           <li class="nav__item">
-            <a href="assets/docs/NickMorrow_Resume_2025.pdf" target="_blank"
-              >Resume</a
-            >
+            <a href="assets/docs/NickMorrow_Resume_2025.pdf" target="_blank">Resume</a>
           </li>
           <li class="nav__item"><a href="projects.html">Projects</a></li>
           <!-- <li class="nav__item"><a href="contact.html">Contact Me</a></li> -->
@@ -49,20 +44,56 @@
       </nav>
     </header>
     <main>
+      <ul class="nav-tabs">
+        <li class="tab-item active" data-tab-target="#LSHS">LSHS Remodel</li>
+        <li class="tab-item" data-tab-target="#projectTwo">Project Two (Example)</li>
+        <li class="tab-item" data-tab-target="#projectThree">Project Three (Example)</li>
+      </ul>
       <div class="bg-dark container tab-content" id="projectTabContent">
-        <div class="content-grid">
-          <div class="tab-pane active fade show" id="LSHS" role="tabpanel" aria-labelledby="lshs-tab"">
+        <div class="tab-pane active" id="LSHS">
+          <div class="content-grid">
+            <h2>High School Website Remodel</h2>
+            <p></p>
             <div class="visual-demo">
               <!-- Visual demonstration will go here -->
-              <iframe class="projectFrame" src="https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/"></iframe>
+              <iframe
+                class="projectFrame"
+                src="https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/"
+              ></iframe>
             </div>
             <div class="explanation">
               <!-- Explanation of the project will go here -->
-              <h2>High School Website Remodel</h2>:<br />
-								&emsp;- Converted the web page to HTML 5<br />
-								&emsp;- Utilized bootstrap and a static navigation<br />
-								&emsp;- Modular design for clean interface on all platforms including mobile<br />
-								&emsp;- <a href = "https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/" target = "_blank">LSHS.lsr7.org</a>
+              &emsp;- Converted the web page to HTML 5<br />
+              &emsp;- Utilized bootstrap and a static navigation<br />
+              &emsp;- Modular design for clean interface on all platforms including mobile<br />
+              &emsp;-
+              <a href="https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/" target="_blank"
+                >LSHS.lsr7.org</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="projectTwo">
+          <div class="content-grid">
+            <h2>Project Two Title</h2>
+            <p>Details about Project Two. This is placeholder content.</p>
+            <div class="visual-demo">
+              <p><em>Visual demo for Project Two would go here.</em></p>
+            </div>
+            <div class="explanation">
+              <p><em>Explanation for Project Two.</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="projectThree">
+          <div class="content-grid">
+            <h2>Project Three Title</h2>
+            <p>Details about Project Three. This is placeholder content.</p>
+            <div class="visual-demo">
+              <p><em>Visual demo for Project Three would go here.</em></p>
+            </div>
+            <div class="explanation">
+              <p><em>Explanation for Project Three.</em></p>
             </div>
           </div>
         </div>
@@ -72,15 +103,10 @@
     <p>https://github.com/mdx97/recipe_app</p> -->
 
     <!-- Footer -->
-    <footer
-      class="p-4 bg-dark text-center shadow align-top rounded-bottom footer"
-      id="footStyle"
-    >
+    <footer class="p-4 bg-dark text-center shadow align-top rounded-bottom footer" id="footStyle">
       <div class="row">
         <div class="col-sm-12">
-          <span class="text-muted"
-            >Copyright &copy 2025 Nicholas Glenn Morrow</span
-          ><br />
+          <span class="text-muted">Copyright &copy 2025 Nicholas Glenn Morrow</span><br />
           <p class="text-muted">-- Last Updated --<br />June 02, 2025</p>
           <!-- Update Frequently -->
         </div>
@@ -92,5 +118,6 @@
       type="text/javascript"
       src="assets/js/component-injection.js"
     ></script> -->
+    <script type="text/javascript" src="assets/js/tabs.js"></script>
   </body>
 </html>

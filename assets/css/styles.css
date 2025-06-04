@@ -229,6 +229,17 @@ span.text-strong-accent {
 	color: var(--clr-accent);
 }
 
+/* Footer */
+.footer {
+	width: 100%;
+	font-size: 1em;
+	font-family: helvetica neue for SAS; 
+	-webkit-box-shadow: 0px -30px 31px 2px rgba(0,0,0, .69);
+	-moz-box-shadow: 0px -30px 31px 2px rgba(0,0,0, .69);
+	box-shadow: 0px -30px 31px 2px rgba(0,0,0,  .69);
+	border-radius: 0px 0px 9px 9px;
+}
+
 /* Navigation */
 nav.primary-navigation {
 	/* position: fixed; */
@@ -647,6 +658,43 @@ a:active {
 	color: LawnGreen;
 } */
 
+/* Tab Navigation Styles */
+.nav-tabs {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0; /* Adjust margin as needed, added top margin */
+  display: flex;
+  justify-content: center; /* Center tabs */
+  border-bottom: 2px solid #444; /* Darker border for dark theme */
+}
+
+.nav-tabs .tab-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #333; /* Darker tab background */
+  color: #ccc; /* Lighter text for dark tabs */
+  border: 1px solid #444;
+  border-bottom: none;
+  margin-right: 5px;
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+  transition: background-color 0.3s ease;
+}
+
+.nav-tabs .tab-item.active {
+  background-color: #555; /* Slightly lighter active tab */
+  color: #fff; /* White text for active tab */
+  border-bottom-color: #555; /* Match background to "connect" */
+}
+
+.tab-content .tab-pane {
+  display: none; /* Hide inactive panes */
+  padding: 20px; /* Add padding to content panes if not already styled by .container */
+}
+
+.tab-content .tab-pane.active {
+  display: block; /* Show active pane */
+}
+
 /* NEW */
 
 .email-invalid {
@@ -678,14 +726,4 @@ a:active {
 .applecert {
 	width: 60%;
 	height: 60%;
-}
-
-.footer {
-	width: 100%;
-	font-size: 1em;
-	font-family: helvetica neue for SAS; 
-	-webkit-box-shadow: 0px -30px 31px 2px rgba(0,0,0, .69);
-	-moz-box-shadow: 0px -30px 31px 2px rgba(0,0,0, .69);
-	box-shadow: 0px -30px 31px 2px rgba(0,0,0,  .69);
-	border-radius: 0px 0px 9px 9px;
 }
