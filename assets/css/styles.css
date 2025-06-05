@@ -6,13 +6,15 @@ Base Styles
 /* root variables */
 :root {
 	/* Color */
-	--clr-light: #e5e5e5 /*rgb(229, 229, 229)*/; 
 	--clr-light-01: #A3A3A3 /*rgb(163, 163, 163)*/;
 	--clr-light-02: #9bbeec /*rgb(155, 190, 236)*/;
-	--clr-dark: #121212 /*rgb(18, 18, 18)*/;
-	--clr-accent: #85BCA2 /*rgb(133, 188, 162)*/;
+	--clr-light-03: #e5e5e5 /*rgb(229, 229, 229)*/; 
+	--clr-dark-01: #121212 /*rgb(18, 18, 18)*/;
+	--clr-dark-02: #333 /*rgb(51, 51, 51)*/;
+	--clr-dark-03: #666 /*rgb(102, 102, 102)*/;
 	--clr-accent-01: #388065 /*rgb(56, 128, 101)*/;
 	--clr-accent-02: #616194 /*rgb(97, 97, 148)*/;
+	--clr-accent-03: #85BCA2 /*rgb(133, 188, 162)*/;
 	--clr-muted-txt: #9e9689 /*rgb(158, 150, 137) */;
 
 	/* Font Weight */
@@ -130,12 +132,12 @@ html {
 }
 
 body {
-	background-color: var(--clr-light);
+	background-color: var(--clr-light-03);
 	background-image: url(../images/background/vaio_hard_edge.png);
 	background-blend-mode: multiply;
 	background-repeat: repeat;
 	background-attachment: fixed;
-	color: var(--clr-light);
+	color: var(--clr-light-03);
 	font-family: var(--ff-primary);
 	font-size: var(--fs-body);
 	margin: 0;
@@ -151,7 +153,7 @@ h3 { font-size: var(--fs-h3) }
 h1,
 h2,
 h3 {
-	color: var(--clr-accent);
+	color: var(--clr-accent-03);
 	font-family: var(--ff-secondary);
 	font-weight: 900;
 	line-height: 1;
@@ -164,7 +166,7 @@ h3 {
 
 ::selection {
 	background-color: var(--clr-accent-01);
-	color: var(--clr-light)
+	color: var(--clr-light-03)
 }
 
 .text-center {
@@ -179,18 +181,18 @@ section {
 strong { font-weight: var(--fw-bold) }
 
 .bg-light {
-	color: var(--clr-dark);
-	background-color: var(--clr-light);
+	color: var(--clr-dark-01);
+	background-color: var(--clr-light-03);
 }
 
 .bg-primary {
-	color: var(--clr-accent);
-	background-color: var(--clr-dark);
+	color: var(--clr-accent-03);
+	background-color: var(--clr-dark-01);
 }
 
 .bg-dark {
-	color: var(--clr-light);
-	background-color: var(--clr-dark);
+	color: var(--clr-light-03);
+	background-color: var(--clr-dark-01);
 }
 
 .bg-primary h2,
@@ -210,12 +212,22 @@ span.text-strong-accent {
 	font-family: var(--ff-secondary);
 	font-size: var(--fs-h3);
 	font-weight: var(--fw-bold);
-	color: var(--clr-accent);
+	color: var(--clr-accent-03);
 }
 
 a {
+	color: var(--clr-light-02);
+	text-decoration: none;
 	transition: color 0.3s ease, 
 	text-decoration 0.3s ease;
+}
+a:hover,
+a:focus {
+	color: var(--clr-accent-01);
+	text-decoration: underline;
+}
+a:active {
+	color: var(--clr-accent-03);
 }
 
 .container {
@@ -227,8 +239,8 @@ a {
     border-radius: 1em;
 }
 .container.bg-dark {
-	color: var(--clr-light);
-	background-color: var(--clr-dark);
+	color: var(--clr-light-03);
+	background-color: var(--clr-dark-01);
 }
 
 .container--narrow {
@@ -238,8 +250,8 @@ a {
 /* Navigation */
 nav.primary-navigation {
 	/* position: fixed; */
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background: var(--clr-dark-01);
+    color: var(--clr-light-03);
 	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.8);
 	/* border-radius: 0 0 0.5em 0.5em; */
     /* top: 0;
@@ -263,7 +275,7 @@ nav ul {
 nav a {
 	display: inline-block;
 	padding: 0.5em;
-	color: var(--clr-accent-02);
+	color: var(--clr-light-02);
 	text-decoration: none;
 }
 
@@ -271,6 +283,10 @@ nav a:hover,
 nav a:focus {
 	color: var(--clr-accent-01);
 	text-decoration: underline;
+}
+
+nav a:active {
+	color: var(--clr-accent-03);
 }
 
 /* 
@@ -293,7 +309,7 @@ nav a:focus {
 }
 
 .nav__link:hover {
-    color: var(--clr-accent);
+    color: var(--clr-accent-03);
 }
 
 .nav-toggle {
@@ -315,7 +331,7 @@ nav a:focus {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-accent);
+    background: var(--clr-accent-03);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -339,7 +355,7 @@ nav a:focus {
 	width: 100%;
 	font-size: 1em;
 	box-shadow: 0 -0.5rem 1rem rgb(0 0 0 / 0.8);
-	background: var(--clr-dark);
+	background: var(--clr-dark-01);
 	color: var(--clr-muted-txt);
 	margin-top: 2em;
 	margin-bottom: -3em;
@@ -442,7 +458,7 @@ a:focus {
 .resume-info-group a {
 	display: inline-block;
 	padding: 0.25em;
-	color: var(--clr-accent-02);
+	color: var(--clr-light-02);
 	text-decoration: none;
 }
 
@@ -451,6 +467,11 @@ a:hover,
 a:focus {
 	color: var(--clr-accent-01);
 	text-decoration: underline;
+}
+
+.resume-info-group
+a:active {
+	color: var(--clr-accent-03);
 }
 
 .prof-pic img {
@@ -596,61 +617,57 @@ a:focus {
 /* Tab Navigation Styles */
 .nav-tabs {
   list-style-type: none;
-  padding: 0;
+  padding: 1em 0 0.25em 0.5em;
   margin: 20px 0 0; /* Adjust margin as needed, added top margin */
   display: flex;
-  justify-content: center; /* Center tabs */
-  border-bottom: 2px solid #444; /* Darker border for dark theme */
+  justify-content: left;
+  border-bottom: 2px solid var(--clr-accent-02);
 }
 
 .nav-tabs .tab-item {
   padding: 10px 20px;
   cursor: pointer;
-  background-color: #333; /* Darker tab background */
-  color: #ccc; /* Lighter text for dark tabs */
-  border: 1px solid #444;
+  background-color: var(--clr-dark-02); 
+  color: var(--clr-light-02);
+  border: 1px solid var(--clr-accent-02);
   border-bottom: none;
   margin-right: 5px;
-  border-radius: 5px 5px 0 0; /* Rounded top corners */
+  border-radius: 5px 5px 0 0;
   transition: background-color 0.3s ease;
+}
+.nav-tabs .tab-item:hover {
+  background-color: var(--clr-accent-02);
+  color: var(--clr-light-03)
+}
+.nav-tabs .tab-item:active {
+  color: var(--clr-accent-03)
 }
 
 .nav-tabs .tab-item.active {
-  background-color: #555; /* Slightly lighter active tab */
-  color: #fff; /* White text for active tab */
-  border-bottom-color: #555; /* Match background to "connect" */
+  background-color: var(--clr-dark-01);
+  color: var(--clr-accent-01);
+  border-bottom-color: var(--clr-accent-02);
+}
+
+.tab-content {
+	padding-bottom: 0.25em;
+	
+}
+
+.tab-pane.active {
+	border: 3px solid hotpink;
+	margin: 1em 0;
+    border-radius: 0.25em;
+	box-shadow: 0 0.1em 0.5em 0.1em inset var(--clr-accent-02);
 }
 
 .tab-content .tab-pane {
   display: none; /* Hide inactive panes */
-  padding: 20px; /* Add padding to content panes if not already styled by .container */
+  padding: 1em;
 }
 
 .tab-content .tab-pane.active {
-  display: block; /* Show active pane */
-}
-
-.nav-tabs {
-	border-color:#28a745;
-}
-
-.nav-tabs > li a { 
-	border: 1px solid #28a745;
-	color: #fff;
-}
-
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover{
-	background-color: LightSlateGray !important;
-	border:1px solid #28a745;
-	color: LightGreen
-}
-
-.nav-tabs > li > a:hover{
-	background-color: SlateGray !important;
-	border:1px solid #28a745;
-	color: LimeGreen;
+  display: block;
 }
 
 .email-invalid {
