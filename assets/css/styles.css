@@ -421,6 +421,14 @@ nav a:active {
 	.resume-experience {
 		grid-column: span 2;
 	}
+
+	.nav-tabs {
+		padding: 1em 0 0.25em 0.5em;
+	}
+
+	.nav-tabs .tab-item {
+		padding: 0.5em 0.75em;
+	}
 }
 
 .content-grid > .content-left {
@@ -592,61 +600,41 @@ a:active {
 
 /* Projects */
 
-.projects-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr; /* Two equal columns */
-	height: 100vh; /* Full viewport height */
-}
-
-.projectFrame {
-	width: 35em;
-	height: 30em;
-	border: none;
-}
-
-.visual-demo {
-	background-color: #fff;
-	padding: 20px;
-	border-right: 1px solid #ccc;
-}
-
-.explanation {
-	padding: 20px;
-}
-
 /* Tab Navigation Styles */
 .nav-tabs {
-  list-style-type: none;
-  padding: 1em 0 0.25em 0.5em;
-  margin: 20px 0 0; /* Adjust margin as needed, added top margin */
-  display: flex;
-  justify-content: left;
-  border-bottom: 2px solid var(--clr-accent-02);
+	list-style-type: none;
+	padding: 1em 0.25em 0.25em 0.5em;
+	margin: 1em 0 0;
+	display: flex;
+	justify-content: left;
+	border-bottom: 2px solid var(--clr-accent-02);
 }
 
 .nav-tabs .tab-item {
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: var(--clr-dark-02); 
-  color: var(--clr-light-02);
-  border: 1px solid var(--clr-accent-02);
-  border-bottom: none;
-  margin-right: 5px;
-  border-radius: 5px 5px 0 0;
-  transition: background-color 0.3s ease;
+	padding: 0.5em;
+	cursor: pointer;
+	background-color: var(--clr-dark-02); 
+	color: var(--clr-light-02);
+	border: 1px solid var(--clr-accent-02);
+	border-bottom: none;
+	margin-right: 0.25em;
+	border-radius: 0.25em 0.25em 0 0;
+	transition: background-color 0.3s ease;
 }
+
 .nav-tabs .tab-item:hover {
-  background-color: var(--clr-accent-02);
-  color: var(--clr-light-03)
+	background-color: var(--clr-accent-02);
+	color: var(--clr-light-03)
 }
+
 .nav-tabs .tab-item:active {
-  color: var(--clr-accent-03)
+	color: var(--clr-accent-03)
 }
 
 .nav-tabs .tab-item.active {
-  background-color: var(--clr-dark-01);
-  color: var(--clr-accent-01);
-  border-bottom-color: var(--clr-accent-02);
+	background-color: var(--clr-dark-01);
+	color: var(--clr-accent-01);
+	border-bottom-color: var(--clr-accent-02);
 }
 
 .tab-content {
@@ -662,12 +650,34 @@ a:active {
 }
 
 .tab-content .tab-pane {
-  display: none; /* Hide inactive panes */
-  padding: 1em;
+	display: none; /* Hide inactive panes */
+	padding: 1em;
 }
 
 .tab-content .tab-pane.active {
-  display: block;
+	display: block; /* Show active pane */
+}
+
+.projects-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* Two equal columns */
+	height: 100vh; /* Full viewport height */
+}
+
+.projectFrame {
+	width: 100%;
+	height: 60em;
+	border: none;
+	border-radius: 0.25em;
+}
+
+.visual-demo {
+	padding-right: 0.5rem;
+	border-right: 2px solid var(--clr-accent-02);
+}
+
+.explanation {
+	padding: 1rem;
 }
 
 .email-invalid {
