@@ -476,7 +476,6 @@ a:focus {
 	color: var(--clr-accent-01);
 	text-decoration: underline;
 }
-
 .resume-info-group
 a:active {
 	color: var(--clr-accent-03);
@@ -493,7 +492,6 @@ a:active {
 	margin: auto;
 	width: max-content;
 }
-
 .social-media-group a {
 	display: inline-block;
 	padding: 0.25em;
@@ -678,6 +676,18 @@ a:active {
 
 .explanation {
 	padding: 1rem;
+}
+.explanation > h3 {
+	margin-bottom: 0.25rem;
+}
+.explanation > ul {
+	list-style: circle outside;
+	margin-top: 0.25rem;
+	margin-left: -2.5rem;
+}
+.explanation > hr {
+	color: var(--clr-accent-02);
+	margin: 0.25rem 0;
 }
 
 .email-invalid {
