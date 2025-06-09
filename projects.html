@@ -22,14 +22,12 @@
   </head>
   <body>
     <header class="primary-header text-center">
-      <nav>
-        <div class="logo">
-          <img src="assets/images/logo.png" alt="" />
-        </div>
-        <button class="nav-toggle" aria-label="toggle navigation" aria-expanded="false">
-          <span class="hamburger"></span>
-        </button>
-      </nav>
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="" />
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
       <!-- <div id="navbar-placeholder"></div> -->
       <nav class="primary-navigation">
         <ul role="list" class="nav__list">
@@ -47,13 +45,16 @@
     </header>
     <main>
       <div class="bg-dark container tab-content" id="projectTabContent">
+        <button class="nav-tabs-toggle" aria-label="toggle tabbed-navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
         <ul class="nav-tabs">
-          <li class="tab-item active" data-tab-target="#LSHS">LSHS Website</li>
-          <li class="tab-item" data-tab-target="#projectTwo">Weather Wardrobe</li>
-          <li class="tab-item" data-tab-target="#projectThree">myKitchen Web App</li>
-          <li class="tab-item" data-tab-target="#projectFour">Trippple Play Android App</li>
+          <li class="tab__item" data-tab-target="#LSHS">LSHS Website</li>
+          <li class="tab__item active" data-tab-target="#projectTwo">Weather Wardrobe</li>
+          <li class="tab__item" data-tab-target="#projectThree">myKitchen Web App</li>
+          <li class="tab__item" data-tab-target="#projectFour">Trippple Play Android App</li>
         </ul>
-        <div class="tab-pane active" id="LSHS">
+        <div class="tab-pane" id="LSHS">
           <div class="content-grid">
             <h2>Highschool Website Remodel</h2>
             <p></p>
@@ -78,7 +79,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane" id="projectTwo">
+        <div class="tab-pane active" id="projectTwo">
           <div class="content-grid">
             <h2>What to Wear Weather Clock</h2>
             <p></p>
