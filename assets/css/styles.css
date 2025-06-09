@@ -205,7 +205,12 @@ p {
 }
 
 .primary-header {
+	height: 3rem;
+	position: relative;
 	padding-bottom: 1em;
+	margin-bottom: 1em;
+	background: var(--clr-dark-01);
+	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.8);
 }
 
 span.text-strong-accent {
@@ -317,14 +322,6 @@ nav a:active {
 
 /* Mobile Navigation Styles */
 
-/* Ensure header can be a positioning context for absolute children */
-.primary-header {
-  position: relative;
-  /* ... other existing styles for .primary-header ... */
-}
-
-
-
 .nav-toggle {
   display: none; /* Hidden by default on larger screens */
   background: transparent;
@@ -348,7 +345,7 @@ nav a:active {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: var(--clr-accent-03);
+  background: var(--clr-light-02);
   width: 2em;
   height: 3px;
   border-radius: 1em;
@@ -370,13 +367,8 @@ nav a:active {
   bottom: -8px; /* Spacing between hamburger lines */
 }
 
-/* Desktop navigation (default state) */
-/* .primary-navigation .nav__list { */
-  /* Assuming you already have styles for desktop, like display: flex; */
-/* } */
-
 /* Mobile navigation styles */
-@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+@media (max-width: 768px) {
   .nav-toggle {
     display: block; /* Show hamburger button on mobile */
   }
@@ -387,7 +379,7 @@ nav a:active {
     top: 100%; /* Position below the header */
     left: 0;
     right: 0;
-    background: white; /* Background for the dropdown */
+    background: var(--clr-light-02); /* Background for the dropdown */
     box-shadow: 0 3px 5px rgba(0,0,0,0.1);
     z-index: 9999; /* Below toggle, but above page content */
   }
@@ -405,7 +397,7 @@ nav a:active {
   .primary-navigation .nav__item {
     margin: 0;
     text-align: center;
-    border-bottom: 1px solid #eee; /* Optional: separator lines */
+    border-bottom: 1px solid var(--clr-accent-02); /* Optional: separator lines */
   }
   .primary-navigation .nav__item:last-child {
     border-bottom: none;
@@ -418,6 +410,12 @@ nav a:active {
   }
 
   /* Hamburger animation when navigation is open */
+  .nav-toggle[aria-expanded="true"] .hamburger,
+  .nav-toggle[aria-expanded="true"] .hamburger::before,
+  .nav-toggle[aria-expanded="true"] .hamburger::after {
+	background: var(--clr-accent-01);
+  }
+
   .nav-toggle[aria-expanded="true"] .hamburger {
     transform: rotate(45deg);
   }
@@ -427,7 +425,7 @@ nav a:active {
   }
 
   .nav-toggle[aria-expanded="true"] .hamburger::after {
-    transform: translateY(-8px) translateX(8px) rotate(-90deg); /* Adjust translate based on height/spacing */
+    transform: translateY(-0.5em) translateX(0.05rem) rotate(-90deg); /* Adjust translate based on height/spacing */
   }
 }
 
