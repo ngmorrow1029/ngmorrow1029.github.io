@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".nav-tabs .tab-item[data-tab-target]")
+  const tabs = document.querySelectorAll(".nav-tabs .tab__item[data-tab-target]")
   const tabContents = document.querySelectorAll(".tab-content .tab-pane")
 
   tabs.forEach((tab) => {
