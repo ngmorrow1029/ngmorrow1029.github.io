@@ -205,7 +205,12 @@ p {
 }
 
 .primary-header {
+	height: 3rem;
+	position: relative;
 	padding-bottom: 1em;
+	margin-bottom: 1em;
+	background: var(--clr-dark-01);
+	box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.8);
 }
 
 span.text-strong-accent {
@@ -266,6 +271,7 @@ nav.primary-navigation {
 
 nav ul {
 	display: flex;
+	flex-direction: row;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -276,6 +282,8 @@ nav a {
 	display: inline-block;
 	padding: 0.5em;
 	color: var(--clr-light-02);
+	font-weight: var(--fw-bold);
+    font-size: var(--fs-body);
 	text-decoration: none;
 }
 
@@ -289,8 +297,8 @@ nav a:active {
 	color: var(--clr-accent-03);
 }
 
-/* 
-.nav__list {
+/* Unused Nav Class styles */
+/* .nav__list {
     list-style: none;
     display: flex;
     height: 100%;
@@ -310,45 +318,116 @@ nav a:active {
 
 .nav__link:hover {
     color: var(--clr-accent-03);
-}
+} */
+
+/* Mobile Navigation Styles */
 
 .nav-toggle {
-    padding: .5em;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    z-index: 1000;
+  display: none; /* Hidden by default on larger screens */
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 10000;
 }
 
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
 .hamburger {
-    display: block;
-    position: relative;
+  display: block;
+  position: relative;
 }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-accent-03);
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
-    transition: transform 250ms ease-in-out;
+  background: var(--clr-light-02);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
 
 .hamburger::before,
 .hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
+  content: '';
+  position: absolute;
+  left: 0;
 }
 
-.hamburger::before { top: 6px; }
-.hamburger::after { bottom: 6px; } */
+.hamburger::before {
+  top: -8px; /* Spacing between hamburger lines */
+}
+
+.hamburger::after {
+  bottom: -8px; /* Spacing between hamburger lines */
+}
+
+/* Mobile navigation styles */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Show hamburger button on mobile */
+  }
+
+  .primary-navigation {
+    display: none; /* Hide nav by default on mobile */
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: 0;
+    right: 0;
+    background: var(--clr-light-02); /* Background for the dropdown */
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    z-index: 9999; /* Below toggle, but above page content */
+  }
+
+  .primary-navigation.nav-open {
+    display: block; /* Show nav when toggled */
+  }
+
+  .primary-navigation .nav__list {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: stretch; /* Make items take full width */
+    padding: 0;
+  }
+
+  .primary-navigation .nav__item {
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-accent-02); /* Optional: separator lines */
+  }
+  .primary-navigation .nav__item:last-child {
+    border-bottom: none;
+  }
+
+  .primary-navigation .nav__item a {
+    display: block;
+    padding: 1em;
+    /* Add other styling for mobile nav links as needed */
+  }
+
+  /* Hamburger animation when navigation is open */
+  .nav-toggle[aria-expanded="true"] .hamburger,
+  .nav-toggle[aria-expanded="true"] .hamburger::before,
+  .nav-toggle[aria-expanded="true"] .hamburger::after {
+	background: var(--clr-accent-01);
+  }
+
+  .nav-toggle[aria-expanded="true"] .hamburger {
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded="true"] .hamburger::before {
+    opacity: 0;
+  }
+
+  .nav-toggle[aria-expanded="true"] .hamburger::after {
+    transform: translateY(-0.5em) translateX(0.05rem) rotate(-90deg); /* Adjust translate based on height/spacing */
+  }
+}
 
 /* Footer */
 .footer {
@@ -637,7 +716,6 @@ a:active {
 
 .tab-content {
 	padding-bottom: 0.25em;
-	
 }
 
 .tab-pane.active {

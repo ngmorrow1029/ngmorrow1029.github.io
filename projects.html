@@ -22,12 +22,14 @@
   </head>
   <body>
     <header class="primary-header text-center">
-      <!-- <div class="logo">
-            <img src="assets/images/logo.png" alt="">
-        </div> -->
-      <!-- <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button> -->
+      <nav>
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </nav>
       <!-- <div id="navbar-placeholder"></div> -->
       <nav class="primary-navigation">
         <ul role="list" class="nav__list">
@@ -56,7 +58,6 @@
             <h2>Highschool Website Remodel</h2>
             <p></p>
             <div class="visual-demo">
-              <!-- Visual demonstration will go here -->
               <iframe
                 class="projectFrame"
                 src="https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/"
@@ -132,8 +133,8 @@
         </div>
         <div class="tab-pane" id="projectThree">
           <div class="content-grid">
-            <h2>My Kitchen Recipe Web Application</h2>
-            <p>Details about Project Three. This is placeholder content.</p>
+            <h2>myKitchen Web Application</h2>
+            <p></p>
             <div class="visual-demo">
               <image src="assets\images\projects\myKitchen(0).png" alt="Home Page" />
               <image src="assets\images\projects\myKitchen(1).png" alt="Third Party Login Integration" />
@@ -141,7 +142,15 @@
               <image src="assets\images\projects\myKitchen(3).png" alt="Calendar View" />
             </div>
             <div class="explanation">
-              <p><em>Explanation for Project Three.</em></p>
+              <h3>Features:</h3>
+              <hr />
+              <ul>
+                <li>Search for a recipe</li>
+                <li>Ingredients list is returned in search results</li>
+                <li>Ingredients list can be automatically ordered from grocery store</li>
+                <li>You can add the planned meal to your Google Calendar</li>
+              </ul>
+              <a href="https://github.com/mdx97/recipe_app">GitHub Repository</a>
             </div>
           </div>
         </div>
@@ -182,8 +191,6 @@
         </div>
       </div>
     </main>
-    <!-- <p>https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/</p>
-    <p>https://github.com/mdx97/recipe_app</p> -->
 
     <!-- Footer -->
     <footer class="p-4 bg-dark text-center shadow align-top rounded-bottom footer" id="footStyle">
@@ -202,5 +209,6 @@
       src="assets/js/component-injection.js"
     ></script> -->
     <script type="text/javascript" src="assets/js/tabs.js"></script>
+    <script type="text/javascript" src="assets/js/navigation.js"></script>
   </body>
 </html>
