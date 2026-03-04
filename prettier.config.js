@@ -1,6 +1,6 @@
 /** @type {import("prettier").Config} */
 
-module.exports = {
+export default {
   semi: false,
   singleQuote: false,
   arrowParens: "always",
@@ -19,4 +19,13 @@ module.exports = {
   trailingComma: "es5",
   useTabs: false,
   vueIndentScriptAndStyle: false,
+  plugins: ["prettier-plugin-astro"],
+  overrides: [
+    {
+      files: "**/*.astro",
+      options: {
+        parser: "astro",
+      },
+    },
+  ],
 }

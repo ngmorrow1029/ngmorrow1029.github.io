@@ -1,7 +1,9 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:astro@^5.17.1": "5.18.0_vite@6.4.1__picomatch@4.0.3_zod@3.25.76"
+    "npm:astro@^5.17.1": "5.18.0_vite@6.4.1__picomatch@4.0.3_zod@3.25.76",
+    "npm:prettier-plugin-astro@0.14": "0.14.1",
+    "npm:prettier@^3.3.2": "3.8.1"
   },
   "npm": {
     "@astrojs/compiler@2.13.1": {
@@ -1837,6 +1839,18 @@
         "source-map-js"
       ]
     },
+    "prettier-plugin-astro@0.14.1": {
+      "integrity": "sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==",
+      "dependencies": [
+        "@astrojs/compiler",
+        "prettier",
+        "sass-formatter"
+      ]
+    },
+    "prettier@3.8.1": {
+      "integrity": "sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==",
+      "bin": true
+    },
     "prismjs@1.30.0": {
       "integrity": "sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw=="
     },
@@ -2019,6 +2033,15 @@
       ],
       "bin": true
     },
+    "s.color@0.0.15": {
+      "integrity": "sha512-AUNrbEUHeKY8XsYr/DYpl+qk5+aM+DChopnWOPEzn8YKzOhv4l2zH6LzZms3tOZP3wwdOyc0RmTciyi46HLIuA=="
+    },
+    "sass-formatter@0.7.9": {
+      "integrity": "sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==",
+      "dependencies": [
+        "suf-log"
+      ]
+    },
     "sax@1.5.0": {
       "integrity": "sha512-21IYA3Q5cQf089Z6tgaUTr7lDAyzoTPx5HRtbhsME8Udispad8dC/+sziTNugOEx54ilvatQ9YCzl4KQLPcRHA=="
     },
@@ -2119,6 +2142,12 @@
       "integrity": "sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==",
       "dependencies": [
         "ansi-regex@6.2.2"
+      ]
+    },
+    "suf-log@2.5.3": {
+      "integrity": "sha512-KvC8OPjzdNOe+xQ4XWJV2whQA0aM1kGVczMQ8+dStAO6KfEB140JEVQ9dE76ONZ0/Ylf67ni4tILPJB41U0eow==",
+      "dependencies": [
+        "s.color"
       ]
     },
     "svgo@4.0.0": {
@@ -2373,6 +2402,11 @@
     }
   },
   "workspace": {
+    "dependencies": [
+      "npm:astro@^5.17.1",
+      "npm:prettier-plugin-astro@0.14",
+      "npm:prettier@^3.3.2"
+    ],
     "packageJson": {
       "dependencies": [
         "npm:astro@^5.17.1"
