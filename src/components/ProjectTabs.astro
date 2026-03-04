@@ -1,0 +1,182 @@
+---
+// This component contains all the logic for the tabbed interface.
+// By default, it renders to static HTML with no client-side JS.
+---
+
+<div class="bg-dark container tab-content" id="projectTabContent">
+  <button class="nav-tabs-toggle" aria-label="toggle tabbed-navigation" aria-expanded="false">
+    <span class="hamburger"></span>
+  </button>
+  <ul class="nav-tabs">
+    <li class="tab__item" data-tab-target="#LSHS">LSHS Website</li>
+    <li class="tab__item active" data-tab-target="#projectTwo">Weather Wardrobe</li>
+    <li class="tab__item" data-tab-target="#projectThree">myKitchen Web App</li>
+    <li class="tab__item" data-tab-target="#projectFour">Trippple Play Android App</li>
+  </ul>
+  <div class="tab-pane" id="LSHS">
+    <div class="content-grid">
+      <h2>Highschool Website Remodel</h2>
+      <p></p>
+      <div class="visual-demo">
+        <iframe class="projectFrame" src="https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/"></iframe>
+      </div>
+      <div class="explanation">
+        <h3>Updates Made:</h3>
+        <hr />
+        <ul>
+          <li>Converted the web page to HTML 5</li>
+          <li>Utilized bootstrap and a static navigation</li>
+          <li>Modular design for clean interface on all platforms including mobile</li>
+        </ul>
+        <h4>Visit the page:</h4>
+        <a href="https://web.archive.org/web/20140911091541/http://lshs.lsr7.org/" target="_blank">LSHS.lsr7.org</a>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane active" id="projectTwo">
+    <div class="content-grid">
+      <h2>What to Wear Weather Clock</h2>
+      <p></p>
+      <div class="visual-demo">
+        <img src="/assets/images/projects/weatherWardrobeImg (3).jpg" alt="Fully Complete Weather Wardrobe Clock." />
+        <img src="/assets/images/projects/weatherWardrobeImg (1).jpg" alt="Components inside the box." />
+        <img src="/assets/images/projects/weatherWardrobeImg (2).jpg" alt="Components outside the box." />
+      </div>
+      <div class="explanation">
+        <h3>Original Concept:</h3>
+        <hr />
+        <ul>
+          <li>
+            <i class="fas fa-umbrella"></i>&nbsp;Umbrella&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Rain&nbsp;<i
+              class="fas fa-cloud"></i>
+          </li>
+          <li>
+            <i class="fas fa-boot"></i>&nbsp;Shovel/Boots&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Snow&nbsp;<i
+              class="fas fa-snowflake"></i>
+          </li>
+          <li>
+            <i class="fas fa-sunglasses"></i>&nbsp;Sunglasses/Ball Cap&nbsp;<i class="fas fa-arrow-right"
+            ></i>&nbsp;Clear Skies&nbsp;<i class="fas fa-sun"></i>
+          </li>
+          <li>
+            <i class="fas fa-tshirt"></i>&nbsp;T-Shirt/Shorts&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Low above
+            60&deg;F&nbsp;<i class="fas fa-temperature-high"></i>
+          </li>
+          <li>
+            <i class="fas fa-layer-group"></i>&nbsp;Sweater&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Low Between
+            40&deg;F and 55&deg;F&nbsp;<i class="fas fa-temperature-high"></i>
+          </li>
+          <li>
+            <i class="fas fa-user-secret"></i>&nbsp;Jacket&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;High Between
+            20&deg;F and 40&deg;F&nbsp;<i class="fas fa-temperature-low"></i>
+          </li>
+          <li>
+            <i class="fas fa-mitten"></i>&nbsp;Knit Cap/Gloves&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Freezing or
+            Below 32&deg;F&nbsp;<i class="fas fa-temperature-low"></i>
+          </li>
+        </ul>
+        <br />
+        <a
+          href="http://api.openweathermap.org/data/2.5/weather?id=5056172&units=imperial&APPID=22e71f4206bfc8e737d847f28463ad0b"
+        ></a>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane" id="projectThree">
+    <div class="content-grid">
+      <h2>myKitchen Web Application</h2>
+      <p></p>
+      <div class="visual-demo">
+        <img src="/assets/images/projects/myKitchen(0).png" alt="Home Page" />
+        <img src="/assets/images/projects/myKitchen(1).png" alt="Third Party Login Integration" />
+        <img src="/assets/images/projects/myKitchen(2).png" alt="Recipe Search" />
+        <img src="/assets/images/projects/myKitchen(3).png" alt="Calendar View" />
+      </div>
+      <div class="explanation">
+        <h3>Features:</h3>
+        <hr />
+        <ul>
+          <li>Search for a recipe</li>
+          <li>Ingredients list is returned in search results</li>
+          <li>Ingredients list can be automatically ordered from grocery store</li>
+          <li>You can add the planned meal to your Google Calendar</li>
+        </ul>
+        <a href="https://github.com/mdx97/recipe_app">GitHub Repository</a>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane" id="projectFour">
+    <div class="content-grid">
+      <h2>Trippple Play Android Application</h2>
+      <p>Details about Project Three. This is placeholder content.</p>
+      <div class="visual-demo"></div>
+      <div class="explanation">
+        <h3>Features:</h3>
+        <hr />
+        <ul>
+          <li>
+            Tournament Scoreboard – organizing all the data from each activity. Keeping track of who won each game mode
+            and turning that into a score board view.
+          </li>
+          <li>
+            <strong>(Hang Man):</strong>&nbsp;Lets a user enter in a word that the other user has to guess 1 character
+            at a time. After this user has entered the winning characters. It would go to a new page hiding the word
+            chosen. Let’s the second user pick a character A-Z trying to guess the correct word the first user has
+            chosen. If you choose a wrong character a part of a stick figure character would be draw. If you choose the
+            correct character the letter will be filled into the blank. _ A _ _ something like that. If the stick figure
+            person is complete than you lose the game and the word is filled in.
+          </li>
+          <li>
+            <strong>(Tournament):</strong>&nbsp;Keeps track of the score for user 1 and user 2 or more. If we have more
+            than 2 users we use a round robin method for the tournament to get all the players to play each other once.
+            We would keep track of who wins each game mode and each series to add a point to that users total and once
+            everyone has played all the games at least once against every user we would tally up the wins and whoever
+            has the most is the winner of the tournament. If the players tie in a game mode they all receive a point. If
+            all players tie in total number of points everyone wins. Risks Hang man – rendering the correct image when
+            needed could be tricky. Decided when the image after so many guesses is complete and the user has loss
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // This script will only be sent to the browser when the component is hydrated.
+  const tabs = document.querySelectorAll(".nav-tabs .tab__item[data-tab-target]")
+  const tabContents = document.querySelectorAll(".tab-content .tab-pane")
+  const navTabsToggle = document.querySelector(".nav-tabs-toggle")
+  const tabContent = document.querySelector(".tab-content")
+
+  // Tab Switching Logic
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", (event) => {
+      const targetId = event.currentTarget.dataset.tabTarget
+      const targetContent = document.querySelector(targetId)
+
+      // Remove active class from all tab items
+      tabs.forEach((t) => {
+        t.classList.remove("active")
+      })
+
+      // Remove active class from all tab panes
+      tabContents.forEach((tc) => {
+        tc.classList.remove("active")
+      })
+
+      // Add active class to the clicked tab and its corresponding content
+      tab.classList.add("active")
+      if (targetContent) {
+        targetContent.classList.add("active")
+      }
+    })
+  })
+
+  // Mobile Tab Toggle Logic
+  if (navTabsToggle && tabContent) {
+    navTabsToggle.addEventListener("click", () => {
+      const isOpened = tabContent.classList.toggle("nav-tabs-open")
+      navTabsToggle.setAttribute("aria-expanded", isOpened.toString())
+    })
+  }
+</script>
