@@ -1,0 +1,16 @@
+{
+  "tasks": {
+    "astro": "deno run -A npm:astro",
+    "dev": "deno run -A npm:astro dev",
+    "start": "deno run -A npm:astro dev",
+    "build": "deno run -A npm:astro build",
+    "preview": "deno run -A npm:astro preview",
+    "check": "deno run -A npm:astro check",
+    "format": "deno run -A npm:prettier --write ."
+  },
+  "imports": {
+    "astro": "npm:astro@^5.17.1",
+    "prettier": "npm:prettier@^3.3.2",
+    "prettier-plugin-astro": "npm:prettier-plugin-astro@^0.14.0"
+  }
+}

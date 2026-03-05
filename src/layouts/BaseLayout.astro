@@ -1,0 +1,74 @@
+---
+import "../styles/global.css"
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="primary-header text-center">
+      <div class="logo">
+        <a href="/"><img src="/assets/images/Portfolio_Logo.png" alt="N" /></a>
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="primary-navigation">
+        <ul role="list" class="nav__list">
+          <li class="nav__item"><a href="/">About Me</a></li>
+          <li class="nav__item">
+            <a href="/assets/docs/NickMorrow_Resume_2026.pdf" target="_blank">Resume</a>
+          </li>
+          <li class="nav__item"><a href="/projects">Projects</a></li>
+          <li class="nav__item"><a href="/contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-4 bg-dark text-center shadow align-top rounded-bottom footer" id="footStyle">
+      <div class="row">
+        <div class="col-sm-12">
+          <span>Copyright &copy 2026 Nicholas Glenn Morrow</span><br />
+          <span>-- Last Updated --<br />March 03, 2026</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Navigation Logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const navToggle = document.querySelector(".nav-toggle")
+        const primaryNav = document.querySelector(".primary-navigation")
+
+        if (navToggle && primaryNav) {
+          navToggle.addEventListener("click", () => {
+            const isOpened = primaryNav.classList.toggle("nav-open")
+            navToggle.setAttribute("aria-expanded", isOpened.toString())
+          })
+        }
+      })
+    </script>
+  </body>
+</html>
