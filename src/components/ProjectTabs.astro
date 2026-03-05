@@ -47,29 +47,42 @@
         <hr />
         <ul>
           <li>
+            By utilizing an Arduino, a temperature ioT device, and a Servo Motor we took in the current temperature and
+            corresponded that value to a degree range on the Servo Motor to determine how you should dress depending on
+            the weather. We called it a "Weather Wardrobe Clock"!
+          </li>
+          <br />
+          <li>
             <i class="fas fa-umbrella"></i>&nbsp;Umbrella&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Rain&nbsp;<i
               class="fas fa-cloud"></i>
           </li>
+          <br />
+
           <li>
             <i class="fas fa-boot"></i>&nbsp;Shovel/Boots&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Snow&nbsp;<i
               class="fas fa-snowflake"></i>
           </li>
+          <br />
           <li>
             <i class="fas fa-sunglasses"></i>&nbsp;Sunglasses/Ball Cap&nbsp;<i class="fas fa-arrow-right"
             ></i>&nbsp;Clear Skies&nbsp;<i class="fas fa-sun"></i>
           </li>
+          <br />
           <li>
             <i class="fas fa-tshirt"></i>&nbsp;T-Shirt/Shorts&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Low above
             60&deg;F&nbsp;<i class="fas fa-temperature-high"></i>
           </li>
+          <br />
           <li>
             <i class="fas fa-layer-group"></i>&nbsp;Sweater&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Low Between
             40&deg;F and 55&deg;F&nbsp;<i class="fas fa-temperature-high"></i>
           </li>
+          <br />
           <li>
             <i class="fas fa-user-secret"></i>&nbsp;Jacket&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;High Between
             20&deg;F and 40&deg;F&nbsp;<i class="fas fa-temperature-low"></i>
           </li>
+          <br />
           <li>
             <i class="fas fa-mitten"></i>&nbsp;Knit Cap/Gloves&nbsp;<i class="fas fa-arrow-right"></i>&nbsp;Freezing or
             Below 32&deg;F&nbsp;<i class="fas fa-temperature-low"></i>
@@ -146,12 +159,13 @@
   const tabs = document.querySelectorAll(".nav-tabs .tab__item[data-tab-target]")
   const tabContents = document.querySelectorAll(".tab-content .tab-pane")
   const navTabsToggle = document.querySelector(".nav-tabs-toggle")
-  const tabContent = document.querySelector(".tab-content")
+  const navTabs = document.querySelector(".nav-tabs")
 
   // Tab Switching Logic
   tabs.forEach((tab) => {
     tab.addEventListener("click", (event) => {
-      const targetId = event.currentTarget.dataset.tabTarget
+      const currentTarget = event.currentTarget as HTMLElement
+      const targetId = currentTarget.dataset.tabTarget
       const targetContent = document.querySelector(targetId)
 
       // Remove active class from all tab items
@@ -173,9 +187,9 @@
   })
 
   // Mobile Tab Toggle Logic
-  if (navTabsToggle && tabContent) {
+  if (navTabsToggle && navTabs) {
     navTabsToggle.addEventListener("click", () => {
-      const isOpened = tabContent.classList.toggle("nav-tabs-open")
+      const isOpened = navTabs.classList.toggle("nav-tabs-open")
       navTabsToggle.setAttribute("aria-expanded", isOpened.toString())
     })
   }

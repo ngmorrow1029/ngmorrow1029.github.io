@@ -414,6 +414,11 @@ div.logo > a > img {
     margin-top: 0.5rem;
   }
 
+  .nav-tabs-toggle {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
   .nav-toggle,
   .nav-tabs-toggle {
     display: block; /* Show hamburger button on mobile */
