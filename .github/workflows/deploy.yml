@@ -23,9 +23,8 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
-          # The action will automatically use npm because of your package.json.
           node-version: 20
-          package-manager: deno
+          package-manager: npm
 
   deploy:
     needs: build
