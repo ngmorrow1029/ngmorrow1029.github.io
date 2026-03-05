@@ -241,7 +241,6 @@ a:active {
 }
 
 .container {
-  /* max-width: 100rem; */
   margin-inline: auto;
   padding-inline: 1rem;
   width: min(90%, 70.5em);
@@ -335,7 +334,6 @@ div.logo > a > img {
 }
 
 /* Mobile Navigation Styles */
-
 .nav-toggle {
   display: none; /* Hidden by default on larger screens */
   background: transparent;
@@ -521,6 +519,23 @@ div.logo > a > img {
   main {
     padding-top: 4rem;
   }
+
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    padding-block: 1rem;
+    margin-inline: auto;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .resume-experience > p {
+    margin-left: 0.25em;
+  }
 }
 
 /* Footer */
@@ -537,11 +552,11 @@ div.logo > a > img {
 
 /* Homepage Styles */
 .content-grid {
-  display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr;
   padding-block: 1rem;
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid-container {
@@ -551,6 +566,7 @@ div.logo > a > img {
   box-shadow: 0 0.1em 0.5em 0.1em inset var(--clr-accent-02);
 }
 
+/* Larger Screen Sizes */
 @media (min-width: 60em) {
   .container {
     padding-inline: 2rem;
@@ -602,6 +618,10 @@ div.logo > a > img {
   .nav-tabs .tab__item {
     padding: 0.5em 0.75em;
   }
+
+  .resume-experience > p {
+    margin-left: 2.5em;
+  }
 }
 
 .content-grid > .content-left {
@@ -631,7 +651,7 @@ a:focus {
 }
 
 .resume-info-group {
-  width: max-content;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
@@ -662,7 +682,7 @@ a:focus {
 
 .social-media-group {
   margin: auto;
-  width: max-content;
+  width: fit-content;
 }
 .social-media-group a {
   display: inline-block;
@@ -674,9 +694,9 @@ a:focus {
   color: var(--clr-accent-01);
 }
 
-.resume-experience > p {
-  margin-left: 2.5em;
-}
+/* .resume-experience > p {
+  margin-left: 0.25rem;
+} */
 
 .resume-experience > span.resume-experience-body {
 }
@@ -732,7 +752,7 @@ a:focus {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 400px) {
   .resume-modal-content {
     max-width: 100%;
   }
