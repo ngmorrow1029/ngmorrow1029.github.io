@@ -163,9 +163,8 @@
 
   // Tab Switching Logic
   tabs.forEach((tab) => {
-    tab.addEventListener("click", (event) => {
-      const currentTarget = event.currentTarget as HTMLElement
-      const targetId = currentTarget.dataset.tabTarget
+    tab.addEventListener("click", () => {
+      const targetId = tab.getAttribute("data-tab-target")
       const targetContent = document.querySelector(targetId)
 
       // Remove active class from all tab items
