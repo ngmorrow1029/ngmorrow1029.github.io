@@ -507,7 +507,7 @@ a:focus {
 }
 
 .resume-info-group {
-  width: fit-content;
+  width: max-content;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
