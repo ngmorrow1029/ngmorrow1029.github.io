@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-light-03);
+  background-image: url("/assets/images/background/vaio_hard_edge.png");
+  background-blend-mode: multiply;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: var(--clr-light-03);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  margin: 0;
+  line-height: 1.6;
+  padding: 0 0 2rem 0;
+}
+
+::selection {
+  background-color: var(--clr-accent-01);
+  color: var(--clr-light-03);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-light {
+  color: var(--clr-dark-01);
+  background-color: var(--clr-light-03);
+}
+
+.bg-primary {
+  color: var(--clr-accent-03);
+  background-color: var(--clr-dark-01);
+}
+
+.bg-dark {
+  color: var(--clr-light-03);
+  background-color: var(--clr-dark-01);
+}
+
+.bg-primary h2,
+.bg-light h2 {
+  color: var(--clr-accent-02);
+}
+
+a {
+  color: var(--clr-light-02);
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    text-decoration 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: var(--clr-accent-01);
+    text-decoration: underline;
+  }
+  &:active {
+    color: var(--clr-accent-03);
+  }
+}
+
+.email-invalid,
+.thankyou_message {
+  display: none;
+}

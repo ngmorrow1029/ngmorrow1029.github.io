@@ -1,0 +1,145 @@
+/* Tab Navigation Styles */
+.nav-tabs {
+  list-style-type: none;
+  padding: 1em 0.25em 0.25em 0.5em;
+  margin: 1em 0 0;
+  display: flex;
+  justify-content: left;
+  border-bottom: 2px solid var(--clr-accent-02);
+
+  .tab__item {
+    padding: 0.5em;
+    cursor: pointer;
+    background-color: var(--clr-dark-02);
+    color: var(--clr-light-02);
+    border: 1px solid var(--clr-accent-02);
+    border-bottom: none;
+    margin-right: 0.25em;
+    border-radius: 0.25em 0.25em 0 0;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--clr-accent-02);
+      color: var(--clr-light-03);
+    }
+
+    &:active {
+      color: var(--clr-accent-03);
+    }
+
+    &.active {
+      background-color: var(--clr-dark-01);
+      color: var(--clr-accent-01);
+      border-bottom-color: var(--clr-accent-02);
+    }
+  }
+}
+
+.tab-content {
+  padding-bottom: 0.25em;
+
+  .tab-pane {
+    display: none; /* Hide inactive panes */
+    padding: 1em;
+
+    &.active {
+      display: block; /* Show active pane */
+      border: 3px solid hotpink;
+      margin: 1em 0;
+      border-radius: 0.25em;
+      box-shadow: 0 0.1em 0.5em 0.1em inset var(--clr-accent-02);
+    }
+  }
+}
+
+.nav-tabs-toggle {
+  display: none; /* Hidden by default on larger screens */
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 1em;
+  z-index: 10000;
+}
+
+@media (min-width: 60em) {
+  .nav-tabs {
+    padding: 1em 0 0.25em 0.5em;
+    .tab__item {
+      padding: 0.5em 0.75em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-tabs-toggle {
+    display: block;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .nav-tabs {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: 0;
+    right: 0;
+    background: var(--clr-light-02); /* Background for the dropdown */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Below toggle, but above page content */
+    transition:
+      opacity 0.3s ease-in-out,
+      max-height 0.3s ease-in-out,
+      visibility 0s linear 0.3s; /* Delay visibility change */
+    margin-bottom: 3rem;
+
+    &.nav-tabs-open {
+      opacity: 1;
+      visibility: visible;
+      max-height: 30em; /* Adjust if your nav content is taller */
+      transition:
+        opacity 0.3s ease-in-out,
+        max-height 0.3s ease-in-out,
+        visibility 0s linear 0s;
+    }
+
+    .tab__item {
+      flex-direction: column; /* Stack nav items vertically */
+      align-items: stretch; /* Make items take full width */
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      border-bottom: 1px solid var(--clr-accent-02); /* Optional: separator lines */
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        display: block;
+        padding: 1em;
+      }
+    }
+  }
+
+  .nav-tabs-toggle[aria-expanded="true"] .hamburger {
+    background: var(--clr-accent-01);
+    transform: rotate(45deg);
+
+    &::before {
+      opacity: 0;
+      background: var(--clr-accent-01);
+    }
+
+    &::after {
+      transform: translateY(-0.5em) translateX(0.05rem) rotate(-90deg);
+      background: var(--clr-accent-01);
+    }
+  }
+
+  .tab-content {
+    margin-bottom: 3rem;
+  }
+}

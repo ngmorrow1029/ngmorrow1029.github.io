@@ -1,0 +1,101 @@
+/* Homepage Styles */
+.resume-img {
+  > img {
+    border-radius: 5px;
+    cursor: pointer;
+    width: max-content;
+  }
+}
+
+.prof-pic {
+  width: fit-content;
+  img {
+    border-radius: 0.25em;
+  }
+}
+
+.resume-experience {
+  grid-column: span 2;
+  > p {
+    margin-left: 2.5em;
+  }
+}
+
+.contact-info-group {
+  width: max-content;
+  margin-top: 1em;
+
+  a {
+    display: inline-block;
+    padding: 0.25em;
+    color: var(--clr-accent-02);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--clr-accent-01);
+      text-decoration: underline;
+    }
+  }
+}
+
+.resume-info-group {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+
+  a {
+    display: inline-block;
+    padding: 0.25em;
+    color: var(--clr-light-02);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--clr-accent-01);
+      text-decoration: underline;
+    }
+    &:active {
+      color: var(--clr-accent-03);
+    }
+  }
+}
+
+.social-media-group {
+  margin: auto;
+  width: fit-content;
+  a {
+    display: inline-block;
+    padding: 0.25em;
+    color: var(--clr-accent-02);
+    text-decoration: none;
+    &:hover {
+      color: var(--clr-accent-01);
+    }
+  }
+}
+
+.applecert {
+  width: 50%;
+  height: 50%;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 4rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .resume-info-group {
+    width: fit-content;
+  }
+
+  .resume-experience > p {
+    margin-left: 0.25em;
+  }
+}

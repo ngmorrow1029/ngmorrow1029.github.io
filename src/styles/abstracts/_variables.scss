@@ -1,0 +1,34 @@
+/***** 
+Base Styles
+*****/
+
+/* root variables */
+:root {
+  /* Color */
+  --clr-light-01: #a3a3a3 /*rgb(163, 163, 163)*/;
+  --clr-light-02: #9bbeec /*rgb(155, 190, 236)*/;
+  --clr-light-03: #e5e5e5 /*rgb(229, 229, 229)*/;
+  --clr-dark-01: #121212 /*rgb(18, 18, 18)*/;
+  --clr-dark-02: #333 /*rgb(51, 51, 51)*/;
+  --clr-dark-03: #666 /*rgb(102, 102, 102)*/;
+  --clr-accent-01: #388065 /*rgb(56, 128, 101)*/;
+  --clr-accent-02: #616194 /*rgb(97, 97, 148)*/;
+  --clr-accent-03: #85bca2 /*rgb(133, 188, 162)*/;
+  --clr-muted-txt: #9e9689 /*rgb(158, 150, 137) */;
+
+  /* Font Weight */
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  /* Font Family */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+
+  /* Font Size */
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}

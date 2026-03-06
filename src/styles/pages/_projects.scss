@@ -1,0 +1,34 @@
+/* Projects */
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  height: 100vh; /* Full viewport height */
+}
+
+.projectFrame {
+  width: 100%;
+  height: 60em;
+  border: none;
+  border-radius: 0.25em;
+}
+
+.visual-demo {
+  padding-right: 0.5rem;
+  border-right: 2px solid var(--clr-accent-02);
+}
+
+.explanation {
+  padding: 1rem;
+  > h3 {
+    margin-bottom: 0.25rem;
+  }
+  > ul {
+    list-style: circle outside;
+    margin-top: 0.25rem;
+    margin-left: -2.5rem;
+  }
+  > hr {
+    color: var(--clr-accent-02);
+    margin: 0.25rem 0;
+  }
+}

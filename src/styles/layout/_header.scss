@@ -1,0 +1,35 @@
+.primary-header {
+  height: 2.5rem;
+  position: relative;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  background: var(--clr-dark-01);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.8);
+}
+
+div.logo > a > img {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  margin-top: 0.35rem;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .primary-header {
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+    margin-bottom: 2rem;
+  }
+
+  div.logo > a > img {
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,29 @@
+.content-grid {
+  gap: 1rem;
+  padding-block: 1rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+
+  > .content-left {
+    grid-template-columns: 70% 1fr;
+  }
+
+  > .content-right {
+    grid-template-columns: 1fr 70%;
+  }
+}
+
+.grid-container {
+  border: 3px solid hotpink;
+  padding: 1rem;
+  border-radius: 0.25em;
+  box-shadow: 0 0.1em 0.5em 0.1em inset var(--clr-accent-02);
+}
+
+@media (min-width: 60em) {
+  .content-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+}

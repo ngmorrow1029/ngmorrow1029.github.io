@@ -1,0 +1,22 @@
+.container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  width: min(90%, 70.5em);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.8);
+  border-radius: 1em;
+
+  &.bg-dark {
+    color: var(--clr-light-03);
+    background-color: var(--clr-dark-01);
+  }
+
+  &--narrow {
+    max-width: 34rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .container {
+    padding-inline: 2rem;
+  }
+}
