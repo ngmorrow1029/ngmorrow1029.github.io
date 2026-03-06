@@ -7,10 +7,16 @@ This component contains all the logic for the tabbed interface.
 By default, it renders to static HTML with no client-side JS. 
 -->
 <div class="bg-dark container tab-content" id="projectTabContent">
-  <button class="nav-tabs-toggle" aria-label="toggle tabbed-navigation" aria-expanded="false">
+  <button
+    class="nav-tabs-toggle"
+    aria-label="toggle tabbed-navigation"
+    aria-expanded="false"
+    aria-controls="nav-tabs-menu"
+  >
+    <span class="sr-only">Menu</span>
     <span class="hamburger"></span>
   </button>
-  <ul class="nav-tabs">
+  <ul class="nav-tabs" id="nav-tabs-menu">
     <li class="tab__item" data-tab-target="#LSHS">LSHS Website</li>
     <li class="tab__item active" data-tab-target="#projectTwo">Weather Wardrobe</li>
     <li class="tab__item" data-tab-target="#projectThree">myKitchen Web App</li>
