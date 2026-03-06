@@ -12,7 +12,9 @@
     cursor: pointer;
     background-color: var(--clr-dark-02);
     color: var(--clr-light-02);
-    border: 1px solid var(--clr-accent-02);
+    border-top: 1px solid var(--clr-accent-02);
+    border-left: 1px solid var(--clr-accent-02);
+    border-right: 1px solid var(--clr-accent-02);
     border-bottom: none;
     margin-right: 0.25em;
     border-radius: 0.25em 0.25em 0 0;
@@ -98,7 +100,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 961px) {
   .nav-tabs-toggle {
     display: block;
     padding-top: 1.5rem;
@@ -110,25 +112,19 @@
     visibility: hidden;
     max-height: 0;
     overflow: hidden;
-    position: absolute;
-    margin-bottom: 3rem;
     flex-direction: column; /* Stack nav items vertically */
     align-items: stretch; /* Make items take full width */
-    top: 7rem; /* Position below the header */
-    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-    left: 0;
-    right: 0;
+    border-radius: 0.25rem;
+    border-bottom: 0px none transparent;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    z-index: 90; /* Below toggle, but above page content */
     transition:
       opacity 0.3s ease-in-out,
       max-height 0.3s ease-in-out,
       visibility 0s linear 0.3s; /* Delay visibility change */
 
     &.nav-tabs-open {
-      background: var(--clr-light-02); /* Background for the dropdown */
       opacity: 1;
       visibility: visible;
       max-height: 30em; /* Adjust if your nav content is taller */
@@ -146,9 +142,14 @@
     .tab__item {
       text-align: center;
       border-bottom: 1px solid var(--clr-accent-02); /* Optional: separator lines */
+      border-radius: 0;
+
+      &:first-child {
+        border-radius: 0.25em 0.25em 0 0;
+      }
 
       &:last-child {
-        border-bottom: none;
+        border-radius: 0 0 0.25em 0.25em;
       }
 
       a {

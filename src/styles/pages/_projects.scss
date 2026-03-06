@@ -1,4 +1,5 @@
 /* Projects */
+
 .projectFrame {
   width: 100%;
   height: 60em;
@@ -24,5 +25,12 @@
   > hr {
     color: var(--clr-accent-02);
     margin: 0.25rem 0;
+  }
+}
+
+@media (max-width: 961px) {
+  .visual-demo {
+    padding-right: 0rem;
+    border-right: 0px none transparent;
   }
 }
