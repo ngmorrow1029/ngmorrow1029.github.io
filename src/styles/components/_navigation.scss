@@ -9,7 +9,7 @@ nav.primary-navigation {
     flex-direction: row;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-left: 4.5rem; /* Make space for the logo */
     justify-content: space-around;
   }
 

@@ -3,6 +3,9 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: var(--clr-light-03);
   background-image: url("/assets/images/background/vaio_hard_edge.png");
   background-blend-mode: multiply;
@@ -13,7 +16,10 @@ body {
   font-size: var(--fs-body);
   margin: 0;
   line-height: 1.6;
-  padding: 0 0 2rem 0;
+}
+
+main {
+  flex-grow: 1;
 }
 
 ::selection {

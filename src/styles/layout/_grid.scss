@@ -14,11 +14,15 @@
   }
 }
 
-.grid-container {
+@mixin grid-container-styles {
   border: 3px solid hotpink;
   padding: 1rem;
   border-radius: 0.25em;
   box-shadow: 0 0.1em 0.5em 0.1em inset var(--clr-accent-02);
+}
+
+.grid-container {
+  @include grid-container-styles;
 }
 
 @media (min-width: 60em) {

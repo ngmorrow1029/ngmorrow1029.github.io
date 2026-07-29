@@ -1,17 +1,5 @@
-@import "abstracts/variables";
-@import "abstracts/utility";
-
-@import "base/reset";
-@import "base/base";
-@import "base/typography";
-
-@import "components/container";
-@import "components/navigation";
-@import "components/tabs";
-
-@import "layout/header";
-@import "layout/footer";
-@import "layout/grid";
-
-@import "pages/home";
-@import "pages/projects";
+@use "abstracts";
+@use "base";
+@use "components";
+@use "layout";
+@use "pages";

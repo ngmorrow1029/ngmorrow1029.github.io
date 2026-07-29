@@ -1,0 +1,219 @@
+/* Skills Pages */
+@use "../layout/grid";
+
+/* Hero intro — full-width band, NOT a card */
+.skills-hero {
+  padding: 3rem 1.5rem 3rem;
+  text-align: center;
+  background-color: var(--clr-dark-02);
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.4);
+
+  > h1 {
+    margin-bottom: 0.25em;
+  }
+
+  > .section__subtitle {
+    margin-bottom: 0.75rem;
+    color: var(--clr-accent-03);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+  }
+
+  > .introduction-body {
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+}
+
+/* Skills card grid */
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+
+  > h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  > .skill-tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    > li {
+      display: inline-block;
+    }
+  }
+}
+
+/* Skill tag (anchor variant of the pill) */
+a.skill-tag {
+  display: inline-block;
+  padding: 0.35em 0.85em;
+  border-radius: 1em;
+  background-color: var(--clr-accent-01);
+  color: var(--clr-light-03);
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-body);
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.15s ease;
+
+  &:hover,
+  &:focus {
+    background-color: var(--clr-accent-03);
+    color: var(--clr-dark-01);
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+/* Examples section */
+.skills-examples {
+  @include grid.grid-container-styles;
+  margin-top: 2rem;
+
+  > h2 {
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.example-block {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5em;
+  border: 2px solid transparent;
+  scroll-margin-top: 5rem;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  > .content-right {
+    gap: 1rem;
+    padding-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+
+    > .visual-demo {
+      padding-right: 0.5rem;
+      border-right: 2px solid var(--clr-accent-02);
+    }
+
+    > .explanation {
+      padding: 1rem;
+
+      > h3 {
+        margin-bottom: 0.25rem;
+      }
+
+      > hr {
+        color: var(--clr-accent-02);
+        margin: 0.25rem 0;
+      }
+
+      > ul {
+        list-style: circle outside;
+        margin-top: 0.25rem;
+        margin-left: -2.5rem;
+      }
+    }
+  }
+
+  &:target,
+  &.is-targeted {
+    border-color: var(--clr-accent-01);
+    box-shadow: var(--bs);
+  }
+}
+
+@media (min-width: 60em) {
+  .example-block > .content-right {
+    display: grid;
+    grid-template-columns: 1fr 70%;
+  }
+}
+
+@media (max-width: 60em) {
+  .skills-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 961px) {
+  .skills-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .example-block > .content-right > .visual-demo {
+    padding-right: 0;
+    border-right: 0 none transparent;
+  }
+}
+
+/* Back to top — hidden until the user scrolls near the bottom of the page.
+   The observer watches <footer> with a bottom-100% rootMargin so the button
+   only reveals when the footer enters the viewport (i.e. user has scrolled
+   past the bulk of the content). */
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  > a {
+    display: inline-block;
+    padding: 0.6em 1.1em;
+    border: 1px solid var(--clr-accent-02);
+    border-radius: 1em;
+    background-color: var(--clr-dark-01);
+    box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.4);
+    color: var(--clr-light-02);
+    font-family: var(--ff-secondary);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--clr-accent-01);
+      color: var(--clr-light-03);
+      text-decoration: none;
+    }
+  }
+}
+
+body.has-scrolled .back-to-top {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (max-width: 961px) {
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
