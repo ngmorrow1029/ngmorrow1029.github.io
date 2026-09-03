@@ -207,7 +207,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro"
             <h3>Motion Graphics</h3>
             <hr />
             <p>Description coming soon — link this skill to a representative motion-graphics piece.</p>
-            <p><a href="#" target="_blank">Watch</a> | <a href="#" target="_blank">Project Notes</a></p>
+            <p>
+              <span>Examples: </span><a href="https://vimeo.com/manage/51547663/general" target="_blank">Box</a> | <a
+                href="https://vimeo.com/manage/51547662/general"
+                target="_blank">Pyramid</a
+              >
+            </p>
           </div>
         </div>
       </article>
@@ -332,7 +337,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro"
     // visual pop persists after the scroll completes (CSS :target only flashes
     // while the hash matches).
     document.addEventListener("click", (event) => {
-      const link = event.target instanceof Element ? event.target.closest('a.skill-tag') : null
+      const link = event.target instanceof Element ? event.target.closest("a.skill-tag") : null
       if (!link) return
 
       const href = link.getAttribute("href")
