@@ -82,11 +82,13 @@ The `.github/workflows/deploy.yml` file automates deployment.
     1.  `build`: Checks out the repository, installs dependencies using `npm` (via `withastro/action`), and builds the Astro site.
     2.  `deploy`: Depends on the `build` job. It uses the `actions/deploy-pages@v4` action to deploy the built artifacts to GitHub Pages.
 
-## 5. Future Development Ideas
+## 5. Future Development & Roadmap
 
 The file `public/assets/docs/AndroidNotes.txt` contains brainstorming for future interactive projects that could be added to this site:
 
 *   **(Hang Man)**: A classic word-guessing game.
 *   **(Tournament)**: A scoreboard to track scores for multiple users in a round-robin tournament.
 
-These notes outline the basic logic and potential risks for each project.
+**Upcoming Site Enhancements:**
+*   **Skills Portfolios**: Expand the Engineering and Videography pages by adding detailed examples and media for all listed skill tags.
+*   **Certifications Page**: Create a new page to showcase professional certifications and credentials.

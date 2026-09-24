@@ -33,7 +33,7 @@ There is no test suite — `astro check` is the only static verification.
 - The nav holds six items: About Me, Resume (PDF, opens in new tab), **Engineering**, **Videography**, Projects, Contact Me. The mobile hamburger still works regardless of item count.
 
 ### Components
-- `src/components/ProjectTabs.astro` — the only reusable component. Renders a tabbed panel of four projects with the second tab active by default. Contains the only nontrivial client-side JS: tab-switching (`data-tab-target` selectors) and a mobile hamburger toggle (`.nav-tabs-toggle` → `.nav-tabs-nav-tabs-open`). Class-name contract: `.tab-content`, `.nav-tabs`, `.tab__item`, `.tab-pane`, `.active`.
+- `src/components/ProjectTabs.astro` — the only reusable component. Renders a tabbed panel of five projects (including Columbia Children's Museum) with the second tab active by default. Contains the only nontrivial client-side JS: tab-switching (`data-tab-target` selectors) and a mobile hamburger toggle (`.nav-tabs-toggle` → `.nav-tabs-nav-tabs-open`). Class-name contract: `.tab-content`, `.nav-tabs`, `.tab__item`, `.tab-pane`, `.active`.
 
 ### Styles
 - `src/styles/main.scss` uses **Sass modules**: `@use "abstracts"; @use "base"; @use "components"; @use "layout"; @use "pages";`. Each directory has a `_index.scss` barrel that `@forward`s its partials (`abstracts/_index.scss` → `variables`, `utility`; `base/_index.scss` → `reset`, `base`, `typography`; `components/_index.scss` → `container`, `navigation`, `tabs`; `layout/_index.scss` → `header`, `footer`, `grid`; `pages/_index.scss` → `home`, `projects`, `contact`, `skills`). To add a new partial, drop the file in its folder and add a `@forward "<name>";` line to the matching `_index.scss`.
@@ -85,3 +85,7 @@ Current setup: `contact.astro` POSTs to a public Google Apps Script web-app URL 
 
 ### Editor settings
 - `.vscode/settings.json` disables CSS validation (since the project uses SCSS), enables bracket pair colorization, and turns on format-on-save. No language-server lint configs are present.
+
+## Future Roadmap
+- **Skills Pages**: Continue building out specific example blocks for all tags in Engineering and Videography portfolios.
+- **Certifications**: Implement a new dedicated certifications page to showcase professional credentials.

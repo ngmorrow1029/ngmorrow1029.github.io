@@ -12,8 +12,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro"
       <p class="section__subtitle">Software &amp; Systems</p>
       <div class="introduction-body">
         <p>
-          A snapshot of the languages, frameworks, and practices I lean on day-to-day. Click any tag below to jump
-          to a relevant example, or scroll on for the full portfolio.
+          A snapshot of the languages, frameworks, and practices I lean on day-to-day. Click any tag below to jump to a
+          relevant example, or scroll on for the full portfolio.
         </p>
       </div>
     </section>
@@ -72,10 +72,35 @@ import BaseLayout from "../../layouts/BaseLayout.astro"
           <li><a href="#example-cloud-development" class="skill-tag">Cloud Development</a></li>
         </ul>
       </section>
+
+      <!-- Agentic Development -->
+      <section class="skill-card grid-container" id="card-agentic">
+        <h2>Agentic Development</h2>
+        <ul class="skill-tags">
+          <li><a href="#example-ollama" class="skill-tag">Ollama</a></li>
+          <li><a href="#example-claude" class="skill-tag">Claude</a></li>
+          <li><a href="#example-gemini" class="skill-tag">Gemini</a></li>
+          <li><a href="#example-hermes" class="skill-tag">Hermes</a></li>
+          <li><a href="#example-agents" class="skill-tag">Agents</a></li>
+          <li><a href="#example-gen-iterative" class="skill-tag">Generative Iterative Dev</a></li>
+        </ul>
+      </section>
+
+      <!-- Automation Development -->
+      <section class="skill-card grid-container" id="card-automation">
+        <h2>Automation Development</h2>
+        <ul class="skill-tags">
+          <li><a href="#example-n8n" class="skill-tag">n8n</a></li>
+          <li><a href="#example-google-home" class="skill-tag">Google Home</a></li>
+          <li><a href="#example-home-assistant" class="skill-tag">Home Assistant</a></li>
+          <li><a href="#example-zigbee-matter" class="skill-tag">Zigbee &amp; Matter</a></li>
+          <li><a href="#example-smart-devices" class="skill-tag">Smart Devices</a></li>
+        </ul>
+      </section>
     </div>
 
     <!-- Examples -->
-    <section class="skills-examples" aria-label="Engineering portfolio examples">
+    <!-- <section class="skills-examples" aria-label="Engineering portfolio examples">
       <h2>Selected Work</h2>
 
       <article class="example-block" id="example-typescript">
@@ -377,7 +402,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro"
           </div>
         </div>
       </article>
-    </section>
+    </section> -->
 
     <!-- Back to top -->
     <div class="back-to-top">
@@ -390,7 +415,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro"
     // visual pop persists after the scroll completes (CSS :target only flashes
     // while the hash matches).
     document.addEventListener("click", (event) => {
-      const link = event.target instanceof Element ? event.target.closest('a.skill-tag') : null
+      const link = event.target instanceof Element ? event.target.closest("a.skill-tag") : null
       if (!link) return
 
       const href = link.getAttribute("href")
